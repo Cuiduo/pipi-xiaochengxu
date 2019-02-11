@@ -1,0 +1,15 @@
+<scroll-view>
+  <view class='item' wx:for="{{list}}" wx:key='{{index}}'>
+    <view class='itemTop'><text>{{index + 1}}</text>. {{item.text}}</view>
+    <view class='itemBtm'>
+      <view class='selType' wx:for='{{item.option}}' wx:key='{{index}}' wx:for-item='secondItem'>
+        <view class='selTypeLeft'>
+          <image wx:if='{{!secondItem.pitch}}' src='/images/sun/icon1.png' mode='scaleToFill' lazy-load></image>
+          <image wx:if='{{secondItem.pitch}}' src='/images/sun/icon1_ss.png' mode='scaleToFill' lazy-load></image>
+        </view>
+        <view class='selTypeRight'>{{secondItem.text}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='submit'>提交</view>
+</scroll-view>

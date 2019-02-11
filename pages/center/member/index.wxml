@@ -1,0 +1,41 @@
+<!--pages/member/index.wxml-->
+<view class='container'>
+
+  <view class='userinfo'>
+     <image class='userinfo-avatar' src='http://img0.imgtn.bdimg.com/it/u=1899397357,205586921&fm=26&gp=0.jpg' background-size="cover">
+     </image>
+      <text class='userinfo-text'>{{nickname}}</text>
+      <view class="starbox">
+         <star total="{{total}}" num="{{num}}"></star>
+      </view>
+      <text class="teacher">{{type}}</text>
+  </view>
+  
+  <view  class='teacher-list' >
+      <view class='list-item-section'>
+        <view class='list-right'>
+          <text >执教经历</text>
+        </view>
+      </view>
+
+      <view class='list-item' wx:for-items="{{teacherlist}}"  wx:key="{{item.content}}">
+          <text class='left_text'>{{item.content}}</text>
+          <text class='right_text'>{{item.position}}</text>
+      </view>
+  </view>
+  
+
+  <view class='teacher-list'>
+    <view class='list-item-section'>
+     <view class='list-right'>
+       <text >减脂经历</text>
+      </view>
+    </view>
+
+    <view class='list-item' wx:for-items="{{minusfat}}"  wx:key="{{item.content}}">
+          <text class='left_text'>{{item.content}}</text>
+      </view>
+  </view>
+ 
+
+</view>

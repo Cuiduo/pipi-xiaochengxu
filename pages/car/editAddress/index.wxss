@@ -1,0 +1,11 @@
+.formBox{display: flex; border-bottom:1px solid rgba(244,244,244,1); align-items: center; padding: 0 40rpx; height: 110rpx; line-height: 110rpx; }
+.formTitle{font-size:30rpx;font-family:PingFang SC;font-weight:400;color:rgba(51,51,51,1); width: 180rpx;}
+.formInput{flex: 1;}
+.formInput input{font-size:30rpx;font-family:PingFang SC;font-weight:400;color:rgba(51,51,51,1);}
+.input-placeholder{font-size:30rpx;font-family:PingFang SC;font-weight:400;color:rgba(178,178,178,1);}
+.labelType{width:92rpx;height:40rpx;line-height: 40rpx; background:rgba(249,249,249,1);border-radius:4px; font-size:11px;font-family:PingFang SC;font-weight:400;color:rgba(102,102,102,1); text-align: center; margin-right: 20rpx;}
+.labelType.active{background:rgba(241,83,31,.1); color:rgba(241,83,31,1); font-weight:bold;}
+.btn-area{margin: 80rpx 40rpx 0 40rpx;}
+.btn-area button{height:84rpx;line-height: 84rpx; background:rgba(241,83,31,1);border-radius:5px; 
+font-size:30rpx; text-align: center;font-family:PingFang SC;font-weight:500;color:rgba(255,255,255,1);}
+.btn-area button.deleteDest{background:rgba(248,248,248,1);color:rgba(51,51,51,1); margin-top: 30rpx;}

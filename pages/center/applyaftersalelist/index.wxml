@@ -1,0 +1,22 @@
+<!--pages/applyaftersalelist/index.wxml-->
+<view class='container'>
+     <view class='time'>
+       <text>{{orderinfo.creattime}}</text>
+     </view>
+
+     <view class='goods-item' wx:for="{{orderinfo.goodslist}}" wx:key="{{index}}">
+          <view class='goods-item-left'>
+            <image src='{{item.imageurl}}' mode="aspectFill" data-url='{{item.imageurl}}'></image>
+          </view>
+        <view class='goods-item-center'>
+          <view class='goods-item-center-title'>
+          {{item.goodstitle}}</view>
+          <view class='goods-item-center-pice'>￥{{item.price}}</view>
+        </view>
+        <view class='goods-item-right'>
+          <view class='goods-item-right-num'>x {{item.nums}}</view>   
+          <view class='goods-item-right-status' hidden="{{item.status===0 ? true : false }}">{{item.statusshow}}</view>    
+          <view class='goods-item-right-applybtn' hidden="{{item.status===0 ? false : true }}" data-index="{{index}}" bindtap='applyaftersaletap'>申请售后</view>
+        </view>
+     </view>
+</view>

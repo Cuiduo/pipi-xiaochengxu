@@ -1,0 +1,11 @@
+page{background:rgba(249,249,249,1);font-family:PingFang SC;font-weight:500;}
+.item{background:rgba(255,255,255,1); border-radius:16rpx; margin: 30rpx 40rpx;}
+.itemTop{border-bottom: 2rpx dashed #F2F2F2; padding: 36rpx 40rpx; font-size: 26rpx; line-height: 44rpx; color: #333333;}
+.itemTop text{font-size: 32rpx;}
+.itemBtm{display: flex; padding: 20rpx 40rpx; flex-wrap: wrap;}
+.selType{width: 50%; box-sizing: border-box; display: flex; align-items: center; padding: 20rpx 0;}
+.selTypeLeft{font-size: 0;}
+.selTypeLeft image{width: 36rpx; height: 36rpx;}
+.selTypeRight{font-size: 24rpx; color: #888888; padding-left: 12rpx;}
+.submit{background: #FFC162; text-align: center; border-radius:42rpx; height: 84rpx; line-height: 84rpx; margin: 80rpx 40rpx; font-weight: bold; font-size: 30rpx; color: #FFFFFF;}
+

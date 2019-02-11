@@ -1,0 +1,53 @@
+<!-- 函数与常量 -->
+<wxs src="../wxs/filter.wxs" module="filterTool" />
+
+<!-- 主体页面根布局 -->
+<view class='root'>
+  <!-- Tab导航 -->
+  <view class='tab' catchtouchmove='none'>
+    <block wx:for='{{filterTool.tabs}}' wx:key='*this'>
+      <view class='tab-item {{curTab==index?"tab-selected":"tab-normal"}}' data-index="{{index}}" bindtap="clickTab">{{item}}</view>
+    </block>
+  </view>
+  <!-- Tab导航对应内容 -->
+  <swiper class='swiper' current="{{curTab}}" duration="230" bindchange="swiperTab">
+    <!-- 症状 -->
+    <swiper-item catchtouchmove="none">
+      <scroll-view scroll-y class='height-match-parent'>
+        <view class='swiper-in'>
+          <block wx:for='{{symptoms}}' wx:key='symptomNo'>
+            <view class='symptom' data-index='{{index}}' bindtap='changeSymptom'>
+              <view class='symptom-name' data-index='{{index}}'>
+                <text>{{item.symptomName}}</text>
+                <image class='ic-radio' src='{{curSymptom.symptomNo==item.symptomNo?filterTool.selectedIconPath:filterTool.unselectedIconPath}}' mode='widthFix'></image>
+              </view>
+              <view class='symptom-direction' hidden='{{curSymptom.symptomNo!=item.symptomNo}}'>{{item.symptomInfo}}</view>
+              <view class='symptom-line'></view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <!-- 自定义 -->
+    <swiper-item catchtouchmove="none">
+      <scroll-view scroll-y class='height-match-parent'>
+        <view class='swiper-in'>
+          <!-- ...........................TODO........................... -->
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <!-- 个人信息 -->
+    <swiper-item catchtouchmove="none">
+      <scroll-view scroll-y class='height-match-parent'>
+        <view class='swiper-in'>
+          <!-- ...........................TODO........................... -->
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <!-- 取消、确定 -->
+  <view class='action'>
+    <text class='action-cancel' bindtap='cancel'>{{filterTool.cancel}}</text>
+    <text class='action-commit' bindtap='commit'>{{filterTool.commit}}</text>
+  </view>
+</view>

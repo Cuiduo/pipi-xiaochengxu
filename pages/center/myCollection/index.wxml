@@ -1,0 +1,44 @@
+<view class="container">
+  <view class='tab'>
+    <view class='{{tabIndex == index ? "active" : ""}}' wx:for='{{tab}}' wx:key='{{index}}' data-index='{{index}}' bindtap='tabClick'>{{item.name}}</view>
+  </view>
+  <scroll-view scroll-y class='scrollBox'>
+    <!-- 营养好货 -->
+    <view wx:if='{{tabIndex == 0}}'>
+      <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="{{index + item.isTouchMove}}">
+        <view class="content">
+          <view class='contentImage'>
+            <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+            <view class='abate'><view>失效</view></view>
+          </view>
+          <view class='contentTxt'>
+            <view class='title'>{{index}}葡萄+奶酪=窈窕秘方</view>
+            <view class='titlePrice'>
+              <view class='titlePriceTop'>￥ <text>82</text>.80</view>
+              <view class='titlePriceBtm'>原价￥122.60</view>
+            </view>
+          </view>
+        </view>
+        <view class="del" catchtap="del" data-index="{{index}}">取消收藏</view>
+      </view>
+    </view>
+    <!-- 文章 -->
+    <view wx:if='{{tabIndex == 1}}'>
+      <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="{{index + item.isTouchMove}}">
+        <view class="content">
+          <view class='contentImage article'>
+            <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+          </view>
+          <view class='contentTxt'>
+            <view class='title article'>{{index}}脚上出现这4种变化，说明你的肝越来越差！千万别忽视</view>
+            <view class='titlePrice'>
+              <view class='articleNum'><image src='/images/sun/heart.png' mode='scaleToFill' lazy-load></image>1658</view>
+              <view class='articleNum'><image src='/images/sun/comments.png' mode='scaleToFill' lazy-load></image>1658</view>
+            </view>
+          </view>
+        </view>
+        <view class="del" catchtap="del" data-index="{{index}}">取消收藏</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

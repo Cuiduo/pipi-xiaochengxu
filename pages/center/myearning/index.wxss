@@ -1,0 +1,257 @@
+/* pages/myearning/index.wxss */
+.contanier
+{
+  background-color: #ffffff;
+}
+.header
+{
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+  height: 380rpx;
+  line-height: 380rpx;
+  border-radius: 24rpx;
+  background-color: #51535E;
+}
+.head-top
+{
+  display: flex;
+  direction: row;
+  margin: 0;
+  height: 96rpx;
+  line-height: 96;
+  width: 100%;
+  /* background-color: royalblue; */
+  justify-content: space-between;
+}
+.nickname
+{
+  margin-left: 32rpx;
+  margin-top: 20rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 22rpx;
+  color: #FDD494;
+}
+.getcashlisticon
+{
+  position: absolute;
+  width: 32rpx;
+  height: 36rpx;
+  padding: 18rpx 16rpx ;
+  top: 30rpx;
+  right: 128rpx;
+}
+.getcashicon
+{
+  position: absolute;
+  width: 36rpx;
+  height: 40rpx;
+  padding: 20rpx 18rpx;
+  top: 28rpx;
+  right: 54rpx;
+}
+
+.earnings
+{
+  position: absolute;
+  display: flex;
+  direction: column;
+  margin-top: 0;
+  width: 670rpx;
+  height: 188rpx;
+  line-height: 188rpx;
+  /* background-color: olive; */
+  justify-content: center;
+}
+
+.earnings-tips
+{
+  position: absolute;
+  color: #FDD494;
+  height: 32rpx;
+  line-height: 32rpx;
+  width: 670rpx;
+  font-size: 22rpx;
+  margin-top: 0;
+  margin-left: 0;
+  flex-direction: column;
+  text-align: center;
+  /* background-color: red; */
+
+}
+.earnings-price
+{
+  position: absolute;
+  color: #FDD494;
+  margin-left: 0;
+  width: 670rpx;
+  font-size: 50rpx;
+  top: 48rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  text-align: center;
+  /* background-color: yellow; */
+}
+.head-bottom
+{
+  display: flex;
+  direction: row;
+  margin-top: 188rpx;
+  width: 670rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+}
+.bottom-sqrcode-view
+{
+ margin-left: 0;
+ width: 50%;
+ height: 100%;
+}
+.bottom-sqrcode
+{
+  position: relative;
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 32rpx;
+  margin-top: 24rpx;
+}
+.head-bottom-rightview
+{
+ float: right;
+ margin-right: 0;
+ width: 50%;
+ height: 100%;
+}
+.head-bottom-icon
+{
+  float: right;
+  width: 40rpx;
+  height: 34rpx;
+  margin-right:8rpx;
+  margin-top: 32rpx;
+}
+.bottom-text
+{
+  float: right;
+  height: 96rpx;
+  line-height: 96rpx;
+  margin-right:32rpx;
+  font-size: 26rpx;
+  color: #FDD494;
+}
+
+.centerview
+{
+  display: flex;
+  direction: row;
+ margin-left: 0rpx;
+ margin-top: 38rpx;
+ width: 100%;
+ height: 88rpx;
+ border-bottom: 2rpx solid #f4f4f4;
+
+}
+.centerview-left
+{
+  
+  margin-left: 20rpx;
+  padding: 0 20rpx;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.centerview-right
+{
+ margin-left: 0rpx;
+ padding: 0 20rpx;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+}
+.on{
+  font-size: 32rpx;
+  color: #0a0a0a;
+}
+.off
+{
+  font-size: 26rpx;
+  color: #B2B2B2;
+}
+
+.list-item
+{
+  width: 100%;
+  height: 162rpx;
+  line-height: 162rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+  display: flex;
+  direction: row;
+  
+}
+.leftcontent
+{
+ margin-left: 0;
+ width: 50%;
+ height: 100%;
+}
+.rightcontent
+{
+ margin-right: 0;
+ width: 50%;
+ height: 100%;
+}
+.left_top_text
+{
+  margin-left: 40rpx;
+  padding-top: 40rpx;
+  font-size: 26rpx;
+  color: #333333;
+  text-align: left;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.left_bottom_text
+{
+  margin-left: 40rpx;
+  margin-top: 8rpx;
+  font-size: 26rpx;
+  color: #B2B2B2;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.right_text1
+{
+   display: flex;
+   direction: row;
+   float: right;
+   color: #333333;
+   font-size: 40rpx;
+   margin-top: 52rpx;
+   margin-right: 40rpx;
+   line-height: 56rpx;
+   height: 56rpx;
+   font-weight: bold;
+   /* background-color: red;  */
+}
+.right_text1-centertext
+{   
+    /* background-color: green; */
+    line-height: 40rpx;
+    height: 40rpx;
+    margin-top: 14rpx;
+}
+.right_text2
+{
+   float: right;
+   color: #B2B2B2;
+   font-size: 26rpx;
+   margin-right: 4rpx;
+   line-height: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}

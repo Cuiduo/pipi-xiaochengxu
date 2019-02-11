@@ -1,0 +1,9 @@
+<!--pages/center/aftersalesubmitsuc/index.wxml-->
+<view class='container'>
+   <view class='topview'>
+      <image  class='success-icon' src='../../../images/aftersalesubmit.png'></image>
+      <text class='tips1'>您的售后申请已提交，售后专员可能与您电话沟通，请保持手机畅通</text>
+   </view>
+
+</view>
+

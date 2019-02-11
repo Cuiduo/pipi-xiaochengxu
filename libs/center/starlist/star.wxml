@@ -1,0 +1,6 @@
+<!--components/star/star.wxml-->
+<view class='star'>
+  <image class='icon-star' src='../../../images/star1.png' wx:for="{{Anum1}}" wx:key="{{index}}"></image>
+  <image class='icon-star' src='../../../images/star2.png' wx:for="{{Anum2}}" wx:key="{{index}}"></image>
+</view>
+

@@ -1,0 +1,120 @@
+<!--index.wxml-->
+ <view class='adressBox'>
+  <view>
+    <image  src='../../../images/adress.png'></image>
+    <text>{{place}}</text>
+    <image class='littleDown' src='../../../images/littleDown.png'></image>
+  </view>  
+</view>
+<view class="searchBox">
+  <view>
+    <image class="searchImg" src='../../../images/search.png'></image>  
+    <input class="search" placeholder-style="color:#BEBEBE" placeholder="请输入食材、症状、营养素" />
+    <image class="counter" src='../../../images/robot.png'></image>    
+  </view>   
+</view>
+<view class="container">
+  <view wx:for="{{lists}}" wx:key="key" class='liBox'>
+    <view class='containerview'>
+      
+        <text wx:if="{{item.limitTimeFlag==1}}" style='float:left'>限时推广</text>
+        <text wx:else style='float:left'>精选组合</text>
+        <view wx:if="{{item.limitTimeFlag==1}}" style='float:left'>
+          <text class='times'>距结束</text>
+          <view class='timeview'>            
+            <text class='time'>{{item.obj.hou}}</text><text class='colon'>:</text>
+            <text class='time'>{{item.obj.min}}</text><text class='colon'>:</text><text class='time'>{{item.obj.sec}}</text>
+          </view>
+        </view>      
+      <view class='deserve'>        
+          值得买({{item.topNum}})       
+      </view>
+    </view>
+    <view class='limitBox'>
+      <image  src='{{item.packageMainImg}}'></image>
+      <text class='priceBox'>￥<text class='activityprice'>{{item.price}} </text> <text wx:if="{{item.limitTimeFlag==1}}" class='originalPrice'>￥{{item.originalPrice}}</text></text>
+      <text bindtap='goBag' data-item="{{item}}" class='packageName'>{{item.packageName}}</text>
+      <view bindtap='goBag' data-item="{{item}}"></view>
+    </view> 
+    <view class='standardBox'>
+      <image src='{{item.supplierLogo}}'></image>
+      <view class='titileBox'>
+        <view>食材由{{item.supplierName}}提供</view>
+        <view class='alreadySelf'>已售{{item.saleNum}}份</view>
+      </view>
+      <view class='btnBox'>
+        <text class='snapUp' bindtap='goBag' data-item="{{item}}">抢购</text>
+        <text class='InviteNew' bindtap="_onShow" data-item="{{item}}">邀新</text>
+      </view>    
+    </view> 
+    <view class='gradeBox'>
+      <image  wx:for="{{item.star}}" wx:key="key" src='../../../images/star.png'></image>      
+      <text>（{{item.starNum}}）</text>
+    </view>
+    <view class='lineBox'></view>
+  </view>
+  <view>
+    <view class='articleBox'>
+      <view bindtap='goArticle' class='articleCower'></view>
+      <view class='collectBox' bindtap='collect'>
+        <image class='collectImg' src='../../../images/collect.png'></image>
+        <text>收藏</text> 
+      </view>
+      <image src='../../../images/img1.png'></image>
+      <text class='articlelabel'>文章</text>
+      <text class='articleName'>瘦不下来？因为你不知道这3个方法</text>
+    </view>
+    <view class='articleAuthor'>
+      <image class='collectImg' src='../../../images/logopipi.png'></image>
+      <text>PiPi健康</text>
+    </view>    
+    <view class='bottomBox'>
+      <view class='collectHeartBox'>
+        <image src='../../../images/collectHeart.png'></image>
+        <text>1658</text>
+      </view>
+      <view class='collectHeartBox'>
+        <image src='../../../images/comment.png'></image>
+        <text>1658</text>
+      </view>
+      <view class='collectHeartBox transmit'>
+        <image src='../../../images/transmit.png'></image>
+        <text>1658</text>
+      </view>
+    </view>
+    <view class='discussBox'>
+      <view class='discussLi'>
+        <text class='discussName'>小燕子:</text>
+        <text class='discussContent'>我现在就每天控制摄入热量，加上一个多小时的有氧无氧运动，一个月才减四斤。</text>
+      </view>
+      <view class='discussLi'>
+        <text class='discussName'>小燕子:</text>
+        <text class='discussContent'>我现在就每天控制摄入热量，加上一个多小时的有氧无氧运动，一个月才减四斤。</text>
+      </view>
+    </view>
+  </view>
+  <view hidden="{{showView}}">
+    <view class="modal-mask" catchtouchmove="preventTouchMove"></view>
+    <view class="modal-dialog" catchtouchmove="preventTouchMove">
+      <view class='m-title'>
+        <image src='../../../images/close.png' bindtap="_onCancel"></image>
+      </view>
+      <view class="m-info">      
+        {{showTitle}}
+      </view>
+      <view class="modal-footer">
+        <view class="btn-footer btn-l-footer">
+          <text>去请客</text>
+        </view>
+        <view class='btn-c-footer'></view>
+        <view class="btn-footer btn-r-footer" catchtap='goShare'>
+          <!-- <text>分享</text> -->
+          <button class='share' open-type="share">        
+            <text>分享</text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>

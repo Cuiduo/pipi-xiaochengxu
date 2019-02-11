@@ -1,0 +1,154 @@
+/* 主体页面根布局 */
+
+.root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tab导航 */
+
+.tab {
+  height: 86rpx;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx solid #f2f2f2;
+  border-bottom: 1rpx solid #f2f2f2;
+  box-sizing: border-box;
+  padding-top: 1rpx;
+}
+
+/*Tab导航item */
+
+.tab-item {
+  height: 85rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  flex: 1;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+/* Tab未选中 */
+
+.tab-normal {
+  color: #333;
+  border-bottom: 4rpx solid rgba(0, 0, 0, 0);
+}
+
+/* Tab选中 */
+
+.tab-selected {
+  color: #f1531f;
+  border-bottom: 4rpx solid #f1531f;
+}
+
+/* Tab导航对应内容*/
+
+.swiper {
+  height: 0;
+  flex: 1;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* Tab导航对应内容里层 */
+
+.swiper-in {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 症状模块 */
+
+.symptom {
+  width: 670rpx;
+}
+
+/* 症状名称 */
+
+.symptom-name {
+  margin-top: 42rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #333;
+}
+
+/* 单选图片 */
+
+.ic-radio {
+  width: 40rpx;
+}
+
+/* 撑满父布局的高度 */
+
+.height-match-parent {
+  height: 100%;
+}
+
+/* 症状描述 */
+
+.symptom-direction {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.4em;
+  color: #888;
+  font-size: 26rpx;
+  word-break: break-all;
+  overflow: hidden;
+  text-align: left;
+  margin-top: 20rpx;
+}
+
+/* 症状列表分割线 */
+
+.symptom-line {
+  margin-top: 42rpx;
+  border-top: 1rpx dashed #f2f2f2;
+  box-sizing: border-box;
+}
+
+/* 功能区域 */
+
+.action {
+  display: flex;
+  height: 100rpx;
+  border-top: 1rpx solid #f2f2f2;
+  box-sizing: border-box;
+}
+
+/* 取消、确认按钮 */
+
+.action-cancel, .action-commit {
+  font-size: 30rpx;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 取消按钮 */
+
+.action-cancel {
+  color: #333;
+  background: #fff;
+}
+
+/* 确认按钮 */
+
+.action-commit {
+  color: #fff;
+  background: #f1531f;
+}

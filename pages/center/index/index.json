@@ -1,0 +1,11 @@
+{
+ "navigationBarTitleText": "PiPi健康",
+ "navigationBarBackgroundColor": "#51535E",
+ "navigationBarTextStyle": "white",
+ "backgroundColor": "#F9F9F9",
+ "usingComponents":
+ {
+    "i-modal": "../../../libs/center/invitcodeinput/index",
+    "i-success" : "../../../libs/center/invitcodesuccess/index"
+ }
+}

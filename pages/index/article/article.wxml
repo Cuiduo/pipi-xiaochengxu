@@ -1,0 +1,42 @@
+<view class='title'>
+  脚上出现这4种变化，说明你的肝越来越差！千万别忽视
+</view>
+<view class='articleAuthor'>
+  <image class='collectImg' src='../../../images/logopipi.png'></image>
+  <text>PiPi健康</text>
+</view>
+<view class='article'>“负卡路里””听到这个词，很多想瘦下来却不想亏了嘴的减肥狂人们一定非常感兴趣。听说，吃这些食物会让人越吃越瘦...
+什么是负卡路里食物？众所周知，只要是食物，大都蕴藏了一定的热量，因为这是作为食物最基本的意义所在：它们满足了我们每天的能量所需。
+负卡路里食物，指那些消化它们所需的卡路里，比它们自身实际所带的卡路里更多的食物。吃这些食物，你的消耗大于摄取的热量。</view>
+<view class='egimgBox'> <image class='egimg' src="../../../images/img1.png"></image>    </view>
+<view class='article'>当我们进食时，只有一部分消耗的卡路里可供我们的身体“燃烧”以获取能量，或储存供以后使用，那是因为其中一些卡路里会在途中丢失。例如，假设你吃含有100卡路里碳水化合物，脂肪和蛋白质的食物。在你的肠道吸收过程中，80卡路里被摄入体内，20个被排出体外（这可能通过纤维或部分未消化的食物排出）。</view>
+
+<view class='messageTit'>
+  精选留言（698）
+</view>
+<view class='messageBox' wx:for="{{2}}" wx:key="key">
+  <view class='messageli'>
+    <view class='limg'><image src='../../../images/logopipi.png'></image></view>
+    <view class='rightBox'>
+      <view class='linameBox'><text class='liname'>小燕子</text><text class='litime'>2018-11-29  11:32</text></view>
+      <view class='liContent'>脚底老是脱皮是怎么回事？不痛不痒的脚底老是脱皮是怎么回事？</view>
+    </view>
+    
+  </view>
+</view>
+<movable-area class='round'>
+    <movable-view x="{{x}}" y="{{y}}" direction="all">
+      <image class='round-click' bindtap='collect' src='{{collectimg}}'></image>
+    </movable-view>
+</movable-area>
+<image wx:if='{{shareImg}}' class='shareimg' src='../../../images/shareimg.png' bindtap='goHome'></image>
+<view class='fixedBottom'>
+  <view class='inputBox'>
+    <image src='../../../images/pinglun.png'></image>
+    <input class='inputContent' placeholder="写评论..." /><text class='postbt' bindtap='pushComment' >发送</text>
+  </view>
+</view>
+
+
+
+

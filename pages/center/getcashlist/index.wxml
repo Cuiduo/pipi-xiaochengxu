@@ -1,0 +1,18 @@
+<!--pages/getcashlist/index.wxml-->
+<view class='container'>
+     <!-- 列表 -->
+     <view class='list-item' wx:for-items="{{list}}"  wx:key="{{item.creattime}}">
+     <!-- 左侧内容 -->
+     <view class='leftcontent'>
+        <view class='left_top_text'>提交申请</view> 
+        <view class='left_bottom_text'>{{item.creattime}}</view> 
+     </view>
+     <!-- 右侧内容 -->
+     <view class='rightcontent'>
+        <view class='right_text1'><text style='font-size:20rpx;'>￥</text>{{item.money}}</view> 
+        <view class='right_text2'>{{item.status}}</view> 
+     </view>
+
+
+      </view>
+</view>

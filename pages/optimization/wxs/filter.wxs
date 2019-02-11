@@ -1,0 +1,13 @@
+/**
+ * 暴露数据
+ */
+module.exports = {
+  /**
+   * 页面中的final常量
+   */
+  tabs: ['症状', '自定义', '个人信息'],
+  selectedIconPath: '../../../images/radio_selected.png',
+  unselectedIconPath: '../../../images/radio_unselected.png',
+  cancel: '取消',
+  commit: '确认',
+}

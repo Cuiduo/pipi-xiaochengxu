@@ -1,0 +1,103 @@
+/* pages/fans/index.wxss */
+
+.contanier
+{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y:hidden;
+  background-color: #FFFFFF;
+}
+.section
+{
+  display: flex;
+  direction: row;
+  height: 118rpx;
+  line-height: 118rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+}
+.section-tips
+{
+   font-size: 32rpx;
+   margin-left: 40rpx;
+   color: #0A0A0A;
+}
+.section-nums
+{
+   font-size: 24rpx;
+   margin-left: 4rpx;
+   color: #333333;
+}
+.fanslist
+{
+  width: 100%;
+  background-color: #fff;
+  padding-top: 0rpx;
+  padding-bottom: 0rpx;
+  display: -webkit-flex;
+  height: 100%;
+  box-sizing: border-box;
+}
+.a-fans
+{
+  width: 100%;
+  overflow: hidden;
+}
+.fans-info
+{
+  display: flex;
+  direction: row;
+  height: 178rpx;
+  line-height: 178rpx;
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
+.fans-info-image
+{
+  position: absolute;
+  display:inline-block;
+  margin-top: 40rpx;
+  margin-left: 40rpx;
+  width: 96rpx;
+	height: 96rpx;
+	border-radius: 50%;
+  border:2rpx solid #FDD494;
+  background-color: #51535E;
+  align-items: center;
+}
+.fans-info-name
+{
+  position: absolute;
+  font-size: 32rpx;
+  color: #0A0A0A;
+  margin-left: 168rpx;
+
+}
+.fans-info-tips
+{
+  position: absolute;
+  font-size: 24rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  color: #c4c4c4;
+  margin-top: 54rpx;
+  right: 40rpx;
+  text-align: right;
+  vertical-align: top;
+  /* background-color: #FDD494; */
+}
+.fans-info-time
+{
+  position: absolute;
+  font-size: 24rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  color: #c4c4c4;
+  margin-top: 89rpx;
+  right: 40rpx;
+  text-align: right;
+  vertical-align: top;
+  /* background-color: #FDD494; */
+}

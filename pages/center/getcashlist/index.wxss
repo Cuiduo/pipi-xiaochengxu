@@ -1,0 +1,76 @@
+/* pages/getcashlist/index.wxss */
+
+.container
+{
+  background-color: #ffffff;
+  border-top: 2rpx solid #f4f4f4;
+}
+
+.list-item
+{
+  width: 100%;
+  height: 158rpx;
+  line-height: 158rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+  display: flex;
+  direction: row;
+  
+}
+.leftcontent
+{
+ margin-left: 0;
+ width: 50%;
+ height: 100%;
+}
+.rightcontent
+{
+ margin-right: 0;
+ width: 50%;
+ height: 100%;
+ vertical-align: center;
+}
+.left_top_text
+{
+  margin-left: 40rpx;
+  padding-top: 42rpx;
+  font-size: 24rpx;
+  color: #333333;
+  text-align: left;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.left_bottom_text
+{
+  margin-left: 40rpx;
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #333333;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+.right_text1
+{
+   float: right;
+   color: #F1531F;
+   font-size: 28rpx;
+   margin-right: 40rpx;
+   line-height: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.right_text2
+{
+    float: right;
+   color: #333333;
+   font-size: 24rpx;
+   margin-right: 30rpx;
+   line-height: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}

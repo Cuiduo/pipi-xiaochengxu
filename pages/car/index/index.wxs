@@ -1,0 +1,14 @@
+// 金额转化
+function priceFn(value) {
+  if (!value) return '';   //不存在
+  if (value.indexOf(".") == -1) {   //没有小数点
+    value = value + '.00';
+  } else {    //存在小数点，取二位小数
+    value = Number(value).toFixed(2)
+  }
+  return value.split(".")
+}
+
+module.exports = {
+  priceFn: priceFn
+}

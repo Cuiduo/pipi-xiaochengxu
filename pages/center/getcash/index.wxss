@@ -1,0 +1,71 @@
+/* pages/getcash/index.wxss */
+.contanier
+{
+  background-color: #ffffff;
+}
+.earnings
+{
+  /* position: absolute; */
+  border-top: 2rpx solid #f4f4f4;
+  display: flex;
+  direction: column;
+  margin-top: 0;
+  width: 750rpx;
+  height: 570rpx;
+  justify-content: center;
+}
+
+.earnings-tips
+{
+  position: absolute;
+  color: #0A0A0A;
+  height: 32rpx;
+  line-height: 32rpx;
+  width: 750rpx;
+  font-size: 32rpx;
+  margin-top: 140rpx;
+  margin-left: 0;
+  flex-direction: column;
+  text-align: center;
+  /* background-color: red; */
+
+}
+.earnings-price
+{
+  position: absolute;
+  color: #51535E;
+  margin-left: 0;
+  width: 750rpx;
+  font-size: 50rpx;
+  top: 280rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  text-align: center;
+  /* background-color: yellow; */
+}
+.getcash
+{
+  display: flex;
+  direction: row;
+  margin-left: 70rpx;
+  margin-right: 70rpx;
+  margin-top: 0rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-radius: 46rpx;
+  background-color: #51535E;
+}
+.getcashicon
+{
+  margin-top: 24rpx;
+  margin-left: 172rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.getcashitext
+{
+   margin-left: 16rpx;
+   font-size: 30rpx;
+   color: #FDD494;
+   height: 84rpx;
+}

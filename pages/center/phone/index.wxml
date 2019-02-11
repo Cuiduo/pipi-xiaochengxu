@@ -1,0 +1,19 @@
+<!--pages/phone/index.wxml-->
+<view class='container'>
+  <view class='text-tips'>绑定手机号</view>
+
+  <view class='phonenum'>
+       <image class='icon' src='../../../images/phone.png'></image>
+       <input class='input' name="phoneNum" class="input" type="text" placeholder="请输入手机号" bindinput='bindphonevalue' type='number' />
+  </view>
+
+  <view class='verificatcode'>
+        <image class='icon' src='../../../images/code.png'></image>
+        <input class='input' name="phoneNum" class="input" type="text" placeholder="请输入验证码" bindinput='bindvericodevalue'  />
+         <button class='sendcodebtn' bindtap='sendcodetap' disabled='{{sendcodebtdisabled}}'>{{sendtitle}}</button>
+  </view>
+
+  <view class='submitview'>
+    <button class='submitview-button' bindtap='bindPhonenum'>提交</button>
+  </view>
+</view>

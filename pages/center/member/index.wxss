@@ -1,0 +1,102 @@
+/* pages/member/index.wxss */
+
+.container{
+  min-height: 100%;
+}
+.userinfo{
+  display: flex;
+  direction: row;
+  width: 750rpx;
+  height: 172rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.userinfo-text {
+  margin-left: 40rpx;
+  margin-top: 24rpx;
+  font-size: 32rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  color: #333333;
+}
+.userinfo-avatar
+{
+  width: 96rpx;
+  height: 96rpx;
+  background-color: #51535E;
+  border-radius: 50%;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  border:2rpx solid #FDD494;
+}
+
+
+.starbox {
+  position: absolute;
+  margin-left: 168rpx;
+  margin-top: 78rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  font-size: 28rpx;
+  /* background-color: #FDD494; */
+}
+.teacher{
+  position: absolute;
+  right: 40rpx;
+  margin-top: 56rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  padding: 2rpx 20rpx;
+  border-radius: 32rpx;
+  background-color: #F1531F;
+  border: 2rpx solid #E44C19;
+  font-size: 20rpx;
+  color: #ffffff;
+}
+.teacher-list
+{
+  width: 100%;
+}
+
+.list-item-section {
+    width: 100%;
+    border-bottom: 2rpx solid #eee;
+    height: 90rpx;
+    line-height: 90rpx;
+    padding-left: 0;
+    font-size: 32rpx;
+    background-color: #F9F9F9;
+}
+.list-right text{
+  display:inline-block;
+  color:#0A0A0A;
+  font-size:32rpx;
+  font-weight: bold;
+  padding-left: 40rpx;
+}
+
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  line-height: 126rpx;
+  height: 126rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left_text
+{
+  margin-left: 40rpx;
+  font-size: 32rpx;
+  color: #0a0a0a;
+}
+
+.right_text{
+  margin-right: 40rpx;
+  font-size: 32rpx; 
+  color: #0a0a0a;
+  text-align: right;
+}

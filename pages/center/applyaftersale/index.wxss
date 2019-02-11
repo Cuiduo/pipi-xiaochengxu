@@ -1,0 +1,162 @@
+/* pages/applyaftersale/index.wxss */
+
+.container
+{
+  background-color: #ffffff;
+}
+.scrollcontent
+{
+  background-color: #ffffff;
+  border-top: 2rpx solid #f4f4f4;
+}
+
+.inputcontent
+{
+  margin-top: 42rpx;
+  margin-right: 40rpx;
+  margin-left: 40rpx;
+  height: 440rpx;
+  border-radius: 4rpx;
+  background-color: #f6f6f6;
+  border: 2rpx solid #e5e5e5;
+}
+.inputcontent textarea
+{
+  display: block;
+  font-size: 30rpx;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.placeholder
+{
+  color: #b2b2b2;
+}
+
+
+.pictureview
+{
+  margin-top: 8rpx;
+  padding: 20rpx 40rpx;
+  display: flex;
+  align-items: center;
+  min-height: 180rpx;
+  justify-content: space-between;
+}
+
+/* grid布局 */
+
+.padding-xs {
+  padding: 6rpx;
+  border-radius: 6rpx;
+  /* background-color: orange; */
+}
+.bg-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.flex-sub {
+  flex: 1;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid.grid-square {
+  margin-bottom: -20rpx;
+  overflow: hidden;
+}
+
+.grid.grid-square > view {
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.deleteview
+{
+  float: right;
+  position: relative;
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 48rpx;
+  height: 48rpx;
+  padding: 0rpx;
+  top: -6rpx;
+  right: -6rpx;
+}
+.border
+{
+  /* background-color: red; */
+  border: 2rpx solid #dedede;
+  padding: 2rpx;
+}
+.addview
+{
+  margin-left: 35rpx;
+  margin-top: 35rpx;
+  width: 70rpx;
+  height: 70rpx;
+  background-color: #ffffff;
+}
+
+.grid.col-4.grid-square > view {
+  padding-bottom: calc((100% - 110rpx)/4);
+  height: 0;
+  width: calc((100% - 110rpx)/4);
+}
+
+.grid.col-4.grid-square > view:nth-child(4n) {
+  margin-right: 0;
+}
+
+.col-4
+{
+  border-right-width: 0px;
+  margin-right: 0;
+}
+
+.grid.col-4>view {
+  width: 25%;
+}
+
+
+.tipview
+{
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.bottomview
+{
+  background-color: rebeccapurple;
+  width: 100%;
+  height: 182rpx;
+  margin-bottom: 0rpx;
+}
+.bottom-tips
+{
+  width: 100%;
+  height: 82rpx;
+  line-height: 82rpx;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.bottom-submit
+{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #ffffff;
+  background-color: #F1531F;
+}

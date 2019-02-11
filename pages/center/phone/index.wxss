@@ -1,0 +1,101 @@
+/* pages/phone/index.wxss */
+
+.container{
+  background-color: #ffffff;
+  border-top: 2rpx solid #f4f4f4;
+}
+
+.text-tips{
+  font-size: 40rpx;
+  color: #333333;
+  left: 80rpx;
+  margin-top: 60rpx;
+  font-weight: bold;
+  margin-left: 80rpx;
+}
+.phonenum
+{
+  position: absolute;
+  display: flex;
+  direction: row;
+  width: 610rpx;
+  height: 116rpx;
+  left: 70rpx;
+  top: 198rpx;
+  border-bottom: 2rpx solid #eee;
+  /* background-color: #E3B56D; */
+}
+.verificatcode
+{
+  position: absolute;
+  display: flex;
+  direction: row;
+  width: 610rpx;
+  height: 116rpx;
+  left: 70rpx;
+  top: 314rpx;
+  border-bottom: 2rpx solid #eee;
+  /* background-color: rgb(71, 22, 22); */
+}
+.icon
+{
+  /* position: absolute; */
+  width: 28rpx;
+  height: 38rpx;
+  margin-left: 12rpx;
+  margin-top: 40rpx;
+}
+.input
+{
+  margin-left: 38rpx;
+  height: 100%;
+  font-size: 32rpx;
+  color: #333333;
+}
+.sendcodebtn
+{
+  position: relative;
+  min-width: 175rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  margin-top: 34rpx;
+  margin-right: 0rpx;
+  padding: 0rpx;
+  font-size:22rpx ;
+  border-radius: 28rpx;
+  border: 2rpx solid #BEBEBE;
+  color: #333333;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sendcodebtn::after
+{
+  border: none;
+}
+
+.submitview
+{
+  position: relative;
+  margin-top: 592rpx;
+  width: 100%;
+}
+.submitview-button
+{
+  height: 84rpx;
+  width: 610rpx;
+  margin-left: 70rpx;
+  padding: 0;
+  background-color: #F1531F;
+  border-radius: 41rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+  align-items: center;
+  vertical-align: center;
+  text-align: center;
+}
+.submitview-button::after
+{
+  border: none;
+}

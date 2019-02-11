@@ -1,0 +1,17 @@
+<!--pages/fans/index.wxml-->
+<view class='contanier'>
+  <view class='section'>
+    <text class='section-tips'>我的粉丝</text>
+    <text class='section-nums'>({{list.length}})</text>
+  </view>
+  <scroll-view class='fanslist' scroll-y="true">
+     <block class='a-fans' wx:for="{{list}}" wx:key="{{item.jointime}}">
+       <view id="{{item.jointime}}" class='fans-info'>
+            <image class='fans-info-image' src='{{item.head}}'></image>
+            <text class='fans-info-name'>{{item.name}}</text>
+            <text class='fans-info-tips'>成为粉丝的时间</text>
+            <text class='fans-info-time'>{{item.jointime}}</text>
+       </view>
+     </block>
+  </scroll-view>
+</view>

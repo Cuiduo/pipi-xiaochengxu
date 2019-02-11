@@ -1,0 +1,31 @@
+.scrollBox{font-family:PingFang SC; font-weight:400; position: absolute; top: 0; left: 0; right: 0; bottom: 0}
+.topScroll{position: absolute; top: 0; left: 0; right: 0; bottom: 104rpx;}
+.top{border-bottom: 24rpx solid rgba(244,244,244,1);  border-top: 2rpx solid #F4F4F4; font-size: 0;}
+.topIn{padding: 0 40rpx; }
+.noDest{display: flex; align-items: center;}
+.noDestCenter{margin: 0 auto; display: flex; align-items: center; padding: 50rpx 0;}
+.destIcon1{width: 28rpx; height: 36rpx;}
+.destIcon2{width: 14rpx; height: 26rpx;}
+.noDestCenter view{margin-left: 16rpx; margin-right: 26rpx; font-size: 32rpx; color: #333333; }
+.destDetail{flex: 1; margin-right: 38rpx; padding: 30rpx 0;}
+.destDetailTop{font-weight: bold; font-size: 30rpx; color: #000000; margin-bottom: 10rpx;}
+.destDetailTop text{margin-left: 24rpx;}
+.destDetailBtm{font-size: 26rpx; color: #000000; line-height: 44rpx;}
+.destDetailBtm text{margin-right: 20rpx; width: 80rpx; height:36rpx; line-height: 36rpx; background:rgba(241,83,31,.1); border-radius:8rpx; text-align: center; font-weight: bold; color: #F1531F; font-size: 22rpx; display: inline-block}
+.topImage{width: 100%; height: 6rpx;}
+
+.orderD{padding: 0 40rpx; border-bottom: 24rpx solid rgba(244,244,244,1);}
+.orderTitle{font-size: 30rpx; color: #333333; font-weight: bold; height: 96rpx; line-height: 96rpx;}
+.foodList{display: flex; align-items: center; font-size: 0; padding-bottom: 32rpx; }
+.foodList image{width: 120rpx; height: 120rpx; margin-right: 16rpx;}
+.foodList view{flex: 1; color: #888888; font-size: 26rpx; text-align: right;}
+.foodList view image{width: 12rpx; height: 22rpx; margin-left: 8rpx; margin-right: 0;}
+.orderPrice{border-bottom: 2rpx solid #F4F4F4; display: flex; flex-direction: column; padding-bottom: 30rpx;}
+.orderPriceItem{display: flex; justify-content: space-between; color: #333333; font-size: 26rpx; margin-top: 30rpx;}
+.priceTotal{font-weight: bold; font-size: 30rpx; color: #F1531F; text-align: right; margin-top: 20rpx;}
+
+.bottom{display: flex; justify-content: space-between; position: absolute; left: 0; bottom: 0; right: 0; height: 104rpx; line-height: 104rpx; box-shadow:0px -1px 10px rgba(0,0,0,0.05);}
+.bottomTotal{font-size: 26rpx; font-weight: bold; color: #F1531F; padding-left: 40rpx;}
+.bottomTotal text{font-size: 36rpx;}
+.bottomPay{width: 180rpx; background: #F1531F; text-align: center; color: #FFFFFF; font-size: 30rpx;}
+

@@ -1,0 +1,436 @@
+/**index.wxss**/
+
+.adressBox {
+  width: 100%;
+  background: #fff;
+  height: 74rpx;
+}
+.adressBox view{
+  padding: 0 40rpx;
+}
+.adressBox image {
+  width: 24rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.share{background: #ffffff;color: #F1531F}
+.share::after{border: none;}
+.adressBox text {
+  font-size: 26rpx;
+  color: #f1531f;
+  line-height: 84rpx;
+  padding-left: 14rpx;
+}
+
+.adressBox .littleDown {
+  width: 16rpx;
+  height: 9rpx;
+  padding-left: 14rpx;
+}
+
+.searchBox {
+  height: 130rpx;
+  width: 100%;
+  padding-top: 10rpx;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #F4F4F4;
+  left: 0;
+  top: 0; 
+}
+.searchBox view{  
+  padding: 0 24rpx;
+}
+.search {
+  width: 620rpx;
+  height: 88rpx;
+  background: #f4f4f4;
+  outline: none;  
+  padding-left: 80rpx;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+}
+
+.searchImg {
+  width: 38rpx;
+  height: 38rpx;
+  position: absolute;
+  left: 50rpx;
+  top: 35rpx;
+  z-index: 100;
+}
+
+.counter {
+  width: 48rpx;
+  height: 42rpx;
+  position: absolute;
+  right: 70rpx;
+  top: 35rpx;
+  z-index: 100;
+}
+.container{  
+  width: 100%;   
+}
+.containerview{
+  padding: 0 40rpx;
+  position: relative;
+  height: 112rpx;
+  line-height: 112rpx;
+  /* width:90%; */
+}
+.container .timeview{
+  display: inline-block;
+}
+
+.container view .time{
+  background: -webkit-linear-gradient(top, #FF7344, #F1531F); 
+  color: #ffffff;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+  padding: 0 10rpx;
+  height:42rpx;
+  min-width: 34rpx;
+  vertical-align: middle;
+  line-height: 42rpx;
+  text-align: center;
+}
+.container .colon{
+  padding: 0 10rpx;
+  color: #F1531F;
+}
+.container .times{
+  font-size: 26rpx;
+  color: #F1531F;
+  padding: 12rpx;
+}
+.container .deserve{
+  font-size: 24rpx;  
+  background: #FFB442;
+  display: block;
+  line-height: 6rpx;
+  min-width: 156rpx;
+  height: 46rpx;
+  text-align: center;
+  line-height: 48rpx;
+  position: absolute;
+  right: 40rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 8rpx;
+  color: #ffffff;
+}
+.deserve text text{
+  font-size: 22rpx;
+}
+.limitBox{
+  width: 100%;
+  height: 560rpx;
+  position: relative;
+}
+.limitBox image{
+  width: 100%;
+  height: 100%;
+}
+.limitBox .priceBox{
+  color: #ffffff;
+  background: #F1531F;
+  position: absolute;
+  top: 24rpx;
+  left: 24rpx;
+  font-size: 22rpx;
+  padding: 16rpx;
+  border-radius: 50% / 50%;
+  z-index: 11;
+}
+.limitBox view{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.priceBox .activityprice{
+  font-size: 36rpx;
+  z-index: 11;
+}
+.priceBox .originalPrice{
+  font-size: 18rpx;
+  text-decoration:line-through;
+  z-index: 11;
+}
+.limitBox .packageName{
+  font-size: 40rpx;
+  color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 11;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.standardBox{
+  padding: 30rpx 0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #F4F4F4;
+  margin: 0 40rpx;
+  position: relative;
+}
+.standardBox image{
+  width: 56rpx;
+  height: 56rpx;
+  float: left;  
+}
+.titileBox{
+  position: absolute;
+  left: 50rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 26rpx;
+  color: #888888;
+  padding-left: 20rpx;
+  
+}
+.alreadySelf{
+  color: #B2B2B2;
+  font-size: 22rpx;
+}
+.btnBox{
+  float: right;
+  /* width: 250rpx; */
+  font-size: 24rpx;
+  padding-top: 10rpx;
+}
+.snapUp{
+  width: 120rpx;
+  border: 1px solid #F1531F;
+  display: inline-block;
+  text-align: center;
+  line-height: 48rpx;
+  height: 46rpx;
+  color: #F1531F;
+  border-radius: 8rpx;
+}
+.InviteNew{
+  width: 120rpx;
+  height: 46rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 48rpx;
+  color: #ffffff;
+  border: 1px solid #F1531F;
+  background: #F1531F;
+  border-radius: 8rpx;
+  margin-left: 16rpx;
+}
+.gradeBox{
+  padding: 30rpx 40rpx;
+  overflow: hidden;
+}
+.gradeBox image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 12rpx;
+  vertical-align: middle;
+}
+.gradeBox text{
+  font-size: 22rpx;
+  color: #B2B2B2;
+  margin-bottom: 20rpx;
+}
+.lineBox{
+  height: 24rpx;
+  width: 100%;
+  background: #F4F4F4;
+
+}
+.articleBox{
+  width: 100%;
+  height: 560rpx;
+  position: relative;
+}
+.articleBox image{
+  width: 100%;
+  height: 100%;
+}
+.articleBox .articleCower{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.articleBox .articleName{
+  font-size: 36rpx;
+  color: #FFFFFF;
+  position: absolute;
+  left: 40rpx;
+  bottom: 28rpx;
+  z-index: 11;
+}
+.articleBox .articlelabel{
+  font-size: 26rpx;
+  color: #FFFFFF;
+  position: absolute;
+  left: 40rpx;
+  top: 24rpx;
+  border-radius: 30rpx;
+  background: rgba(0,0,0,0.2);
+  padding: 5rpx 24rpx;
+  z-index: 11;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+.articleBox .collectBox{
+  font-size: 26rpx;
+  color: #FFFFFF;
+  position: absolute;
+  right: 40rpx;
+  top: 24rpx;
+  border-radius: 8rpx;
+  background: #FFB442;
+  width: 136rpx;
+  height: 46rpx;
+  z-index: 11;
+  text-align: center;
+  line-height: 48rpx;
+  display: table-cell;
+}
+.articleBox .collectBox text{
+  padding-top: 10rpx;
+}
+.articleBox .collectImg{
+  width: 30rpx;
+  height: 28rpx;
+  padding-right: 10rpx;
+  vertical-align: sub;
+}
+.articleAuthor{
+  padding: 30rpx 40rpx 0;
+  height: 52px;
+  line-height: 72rpx;
+}
+.articleAuthor .collectImg{
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  float: left;
+}
+.articleAuthor text{
+  font-size: 30rpx;
+  color: #333333;
+  float: left;
+  margin-left: 30rpx;
+}
+.bottomBox{
+  margin: 0 40rpx;
+  height: 70rpx;
+  border-bottom: 1rpx solid #F4F4F4;
+}
+.collectHeartBox{
+  float: left;
+  margin-right: 50rpx;
+}
+.collectHeartBox image{
+  width: 42rpx;
+  height: 42rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.collectHeartBox text{
+  float: left;
+  font-size: 30rpx;
+  color: #9B9B9B;
+}
+.transmit{
+  float: right;
+  margin-right: 0;
+}
+.discussLi{
+  padding-bottom: 24rpx;
+}
+.discussBox{
+  padding: 30rpx 40rpx;
+  font-size: 26rpx;
+}
+.discussName{
+  color: #576B95;
+  padding-right: 20rpx;
+}
+.discussContent{
+  color: #888888;
+}
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.modal-dialog{
+  font-size: 30rpx;
+  width:560rpx;
+  position: fixed;
+  top: 30%;
+  left:0;
+  right: 0;
+  margin:auto;
+  z-index: 1500;
+  background: #fff;
+  border-radius: 16rpx;
+  display: flex;
+  flex-direction: column;
+}
+.m-title {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: right;
+  align-self: stretch;
+  font-size: 36rpx;
+}
+.m-title image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 28rpx;
+}
+.m-info{
+  font-size: 32rpx;
+  text-align: center;
+  color: #333333;
+  flex: 1;
+}
+
+.modal-footer{
+  display: flex;
+  height: 100rpx;
+  /* border-top: 1rpx solid #E5E5E5; */
+  margin-top: 30rpx;
+}
+.btn-footer{
+  width: 280rpx;
+  font-size: 36rpx;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-l-footer{
+  /* border-right: 1rpx solid #E5E5E5; */
+  color: #333333;
+}
+.btn-c-footer{
+  border-right: 1rpx solid #E5E5E5;
+  height: 50rpx;
+  margin-top: 30rpx;
+}
+.btn-r-footer{
+  color: #F1531F;
+}

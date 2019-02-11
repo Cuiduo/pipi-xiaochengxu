@@ -1,0 +1,16 @@
+<scroll-view class='box'>
+  <scroll-view class='scrollBox' scroll-y>
+    <view class='destBox' wx:for='{{list}}' wx:key='{{item.id}}' bindtap='goBack'>
+      <view class='destSel'>
+        <image src='/images/sun/icon1.png' mode='scaleToFill' lazy-load></image>
+        <image src='/images/sun/icon1_s.png' wx:if='{{false}}' mode='scaleToFill' lazy-load></image>
+      </view>
+      <view class='destName'>
+          <view class='destNameTop'>{{item.name}}<text>{{item.mobile}}</text></view>
+          <view class='destNameBtm'><text>{{item.tagName}}</text>{{item.provinceCode + '-' + item.cityCode + '-' + item.districeCode + '-' + item.streetCode + '-' + item.detailAddress}}</view>
+      </view> 
+      <view class='destEdit' catchtap='toEdit' data-id='{{item.id}}'>编辑</view>
+    </view>
+  </scroll-view>
+  <view class='newDest' bindtap='toEdit' data-id='newDest'>新建地址</view>
+</scroll-view>

@@ -1,0 +1,11 @@
+<!--pages/getcashsucess/index.wxml-->
+<view class='container'>
+   <view class='topview'>
+      <image  class='success-icon' src='../../../images/getcashsuccess.png'></image>
+      <text class='tips1'>申请成功</text>
+      <text class='tips2' >预计7个工作日到账</text>
+   </view>
+     <view class='backview' bindtap='backtocentertap'>
+        返回个人中心
+  </view>
+</view>

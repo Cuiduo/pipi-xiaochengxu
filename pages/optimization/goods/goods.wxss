@@ -1,0 +1,388 @@
+/* pages/optimization/goods/goods.wxss */
+.adressBox {
+  width: 100%;
+  background: #fff;
+  height: 84rpx;
+}
+.adressBox view{
+  padding: 0 40rpx;
+}
+.adressBox image {
+  width: 24rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.adressBox text {
+  font-size: 26rpx;
+  color: #f1531f;
+  line-height: 84rpx;
+  padding-left: 14rpx;
+}
+.meiri{
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx;
+ 
+}
+.meiri image{
+  width: 46rpx;
+  height: 46rpx;
+  vertical-align: baseline;
+}
+.meiri text{
+  color: #333333;
+  font-size: 36rpx;
+  padding: 0 10rpx;
+}
+page{
+  height: 100%;
+}
+.adressBox .littleDown {
+  width: 16rpx;
+  height: 9rpx;
+  padding-left: 14rpx;
+}
+.btn_jump {
+  position: fixed;
+  z-index: 999;
+  top: 400rpx;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0 8rpx 8rpx 0;
+  color: #ffffff;
+}
+.btn_jump .btn_item {
+  border-bottom: 1rpx solid rgba(224, 219, 219,0.2);
+  margin:0 10rpx;
+  padding:15rpx 0;
+  /* margin-bottom: 30rpx; */
+}
+.btn_item image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.jump_list {
+  position: relative;
+  height: 100%;
+}
+.titleBox{
+  width: 100%; 
+}
+.title{
+  padding: 0 40rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+  position: relative;
+  background: rgba(82, 197, 86,0.1);
+}
+.titleBox .titimg{
+  width: 40rpx;
+  height: 40rpx;  
+  vertical-align: middle;
+}
+.title .titlename{
+  color: #333333;
+  font-size: 32rpx;
+  margin-left: 16rpx;
+}
+.specification{
+  color: #888888;
+  font-size: 18rpx;
+  margin-left: 16rpx;
+  position: absolute;
+  top: 5rpx;
+}
+.titleBox .change{
+  position: absolute;
+  height: 28rpx;
+  width: 28rpx;
+  right: 40rpx;
+  top: 44rpx;
+}
+.particulars{
+  padding: 24rpx 0 24rpx 40rpx; 
+  overflow: hidden;
+  border-bottom: 1rpx solid #F4F4F4;
+}
+.detailBox{
+  min-height: 250rpx;
+}
+.detailimg{
+  width: 200rpx;
+  height: 200rpx;
+  float: left;
+}
+.detailright{
+  width: 440rpx;
+  height: 230rpx;
+  float: right;
+  border-bottom: 1rpx solid #F4F4F4;
+}
+.detailname{
+  font-size: 30rpx;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+.detaillable{
+  font-size: 18rpx;
+  color: #888888;
+  margin-bottom: 70rpx;
+}
+.detaillable text{
+  margin-right: 16rpx;
+  padding: 4rpx 16rpx;
+  background: #F2F2F2;
+  border-radius: 20rpx;
+}
+.detaillable .lablehigh{
+  color: #4AC1C4;
+  background: rgba(74, 193, 196,0.1)
+}
+.detailprice{
+  position: relative;
+  font-size: 24rpx;
+  color: #F1531F;
+}
+.detailpriceBig{
+  font-size: 36rpx;
+}
+.yishou{
+  color: #B2B2B2;
+  margin-left: 16rpx;
+}
+.carimg{
+  width: 52rpx;
+  height: 52rpx;
+  float: right;
+  margin-right: 40rpx;
+}
+.tipsBox{
+  height: 86rpx;
+  padding-right: 40rpx;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical; 
+  -webkit-line-clamp:2;
+  position: relative;
+}
+.tipstop{
+  min-height: 86rpx;
+  padding:30rpx 40rpx;
+  line-height: 1;
+  border-bottom: 1rpx solid #F4F4F4;
+}
+.tipsname{
+  color: #F1531F;
+  font-size: 20rpx;
+  background: rgba(241,83,31,0.1);
+  padding: 5rpx 16rpx;
+  border-radius: 20rpx;
+  margin-right: 16rpx;
+}
+.tipstext{
+  color: #333333;
+  font-size: 22rpx;  
+}
+.down{
+  position: absolute;
+  right: 40rpx;
+  bottom: 0;
+  width: 28rpx;
+  height: 28rpx;
+  z-index: 11;
+}
+.hotSale{
+  padding: 30rpx 40rpx;
+  height: 1000rpx;  
+}
+.hotDetail{
+  width: 320rpx;
+  height: 490rpx;
+  border: 1rpx solid #F2F2F2;
+  float: left; 
+  margin: 0 24rpx 32rpx 0;
+}
+.hotDetail:nth-of-type(even){
+  margin-right: 0
+}
+.hotdetailimg{
+  width: 100%;
+  height: 316rpx;
+}
+.hotdetailname{
+  color: #333333;
+  font-size: 30rpx;
+  padding:10rpx 20rpx; 
+}
+.hotdetailprice{
+  font-size: 24rpx;
+  color: #F1531F;
+  padding: 0 20rpx;
+}
+.hotbig{
+  font-size: 36rpx;
+}
+.alreadyself{
+  font-size: 18rpx;
+  color: #B2B2B2;
+  padding-left: 20rpx;
+}
+.hotCar{
+  /* position: absolute; */
+  width: 52rpx;
+  height: 52rpx;
+  float: right;
+}
+.containerview{
+  padding: 0 40rpx;
+  position: relative;
+  height: 112rpx;
+  line-height: 112rpx;
+  /* width:90%; */
+}
+.timeview{
+  display: inline-block;
+}
+
+.containerview view .time{
+  background: -webkit-linear-gradient(top, #FF7344, #F1531F); 
+  color: #ffffff;
+  font-size: 26rpx;
+  padding: 5rpx 10rpx;
+  border-radius: 10rpx;
+}
+.colon{
+  padding: 0 10rpx;
+  color: #F1531F;
+}
+.times{
+  font-size: 26rpx;
+  color: #F1531F;
+  padding: 12rpx;
+}
+.deserve{
+  font-size: 24rpx;
+  float: right;
+  background: #FFB442;
+  padding: 18rpx;
+  line-height: 6rpx;
+  height: 18rpx;
+  margin-top: 38rpx;
+  border-radius: 8rpx;
+  color: #ffffff;
+}
+.deserve text text{
+  font-size: 22rpx;
+}
+.limitBox{
+  width: 100%;
+  height: 560rpx;
+  position: relative;
+}
+.limitBox image{
+  width: 100%;
+  height: 100%;
+}
+.limitBox .priceBox{
+  color: #ffffff;
+  background: #F1531F;
+  position: absolute;
+  top: 24rpx;
+  left: 24rpx;
+  font-size: 22rpx;
+  padding: 16rpx;
+  border-radius: 50% / 50%;
+  z-index: 11;
+}
+.limitBox view{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: 10;
+}
+.priceBox .activityprice{
+  font-size: 36rpx;
+  z-index: 11;
+}
+.priceBox .originalPrice{
+  font-size: 18rpx;
+  text-decoration:line-through;
+  z-index: 11;
+}
+.limitBox .packageName{
+  font-size: 40rpx;
+  color: #FFFFFF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 11;
+}
+.standardBox{
+  padding: 30rpx 0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #F4F4F4;
+  margin: 0 40rpx;
+}
+.standardBox image{
+  width: 56rpx;
+  height: 56rpx;
+  float: left;  
+}
+.titileBox{
+  float: left;
+  font-size: 26rpx;
+  color: #888888;
+  padding-left: 20rpx;
+}
+.alreadySelf{
+  color: #B2B2B2;
+  font-size: 22rpx;
+}
+.btnBox{
+  float: right;
+  /* width: 250rpx; */
+  font-size: 24rpx;
+  padding-top: 10rpx;
+}
+.snapUp{
+  width: 120rpx;
+  border: 1px solid #F1531F;
+  display: inline-block;
+  text-align: center;
+  line-height: 46rpx;
+  height: 46rpx;
+  color: #F1531F;
+  border-radius: 8rpx;
+}
+.InviteNew{
+  width: 120rpx;
+  height: 46rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 46rpx;
+  color: #ffffff;
+  background: #F1531F;
+  border-radius: 8rpx;
+  margin-left: 16rpx;
+}
+.gradeBox{
+  padding: 30rpx 40rpx;
+  overflow: hidden;
+}
+.gradeBox image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 12rpx;
+  vertical-align: middle;
+}
+.gradeBox text{
+  font-size: 22rpx;
+  color: #B2B2B2;
+  margin-bottom: 20rpx;
+}

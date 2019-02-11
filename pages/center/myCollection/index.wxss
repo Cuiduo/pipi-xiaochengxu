@@ -1,0 +1,25 @@
+page{height: 100%; border-top: 2rpx solid rgba(244,244,244,1); box-sizing: border-box;}
+.container {height: 100%; overflow: hidden; position: relative; font-family:PingFang SC;font-weight:400;}
+.tab{display: flex;}
+.tab view{flex: 1; height:88rpx; line-height: 88rpx; text-align: center; border-bottom: 2rpx solid rgba(244,244,244,1); color: #666666; font-size: 30rpx;}
+.tab view.active{border-bottom: 4rpx solid #F1531F; color: #F1531F;}
+.scrollBox{position: absolute; left: 0; bottom: 0; right: 0; top: 90rpx;}
+.touch-item {display: flex; justify-content: space-between; border-bottom:2rpx solid #F4F4F4; overflow: hidden}
+.content {width: 100%; padding: 40rpx 50rpx; transition: all 0.4s; transform: translateX(160rpx); margin-left: -160rpx; display: flex; box-sizing: border-box;}
+.contentImage{position: relative; font-size: 0;}
+.contentImage image{width: 176rpx; height: 176rpx; overflow: hidden}
+.contentImage.article image{width: 210rpx; height: 160rpx;}
+.abate{position: absolute; top: 50%; left: 50%; margin-left: -56rpx; margin-top: -56rpx; width: 112rpx; height: 112rpx; background: rgba(0,0,0,.5); border-radius:50%; display: flex }
+.abate view{color: rgba(255,255,255,.9); font-size: 24rpx; width: 74rpx; height: 50rpx; line-height: 50rpx; border-top: 2rpx solid rgba(255,255,255,.6); border-bottom: 2rpx solid rgba(255,255,255,.6); text-align: center; margin: auto;}
+.contentTxt{display: flex; flex-direction: column; justify-content: space-between; margin-left: 24rpx; padding: 5rpx 0; }
+.title{color: #333333; font-size: 26rpx; line-height: 44rpx;}
+.title.article{font-size: 30rpx;}
+.titlePrice{display: flex; align-items: flex-end; }
+.titlePriceTop{font-size: 24rpx; color: #F1531F;}
+.titlePriceTop text{font-size: 36rpx;}
+.titlePriceBtm{color: #B2B2B2; font-size: 18rpx; text-decoration: line-through; margin-left: 12rpx; padding-bottom: 8rpx;}
+.articleNum{color: #9B9B9B; font-size: 24rpx; display: flex; }
+.articleNum image{width: 34rpx; height: 34rpx; font-size: 0; margin-right: 12rpx;}
+.articleNum:last-child{margin-left: 60rpx;}
+.del {background-color: orangered; width: 160rpx; display: flex; flex-direction: column;align-items: center; justify-content: center; color: #fff; transform: translateX(160rpx);transition: all 0.4s; font-size: 26rpx;}
+.touch-move-active .content,.touch-move-active .del {transform: translateX(0);}

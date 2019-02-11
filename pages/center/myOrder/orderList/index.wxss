@@ -1,0 +1,25 @@
+.scrollBox{position: absolute; top: 0; left: 0; bottom: 0; right: 0}
+.orderType{display: flex; border-top: 2rpx solid rgba(241,238,238,1); border-bottom: 2rpx solid rgba(241,238,238,1);}
+.orderType view{flex: 1; text-align: center; font-size:26rpx;font-family:PingFang SC;
+font-weight:400;color:rgba(51,51,51,1); height: 90rpx; line-height: 90rpx;}
+.orderType view view{display: inline-block; position: relative}
+.orderType view.active view{color:rgba(241,83,31,1);}
+.orderType view.active view::after{ content: ''; position: absolute; bottom: -2rpx; left: -10rpx; right: -10rpx; height: 6rpx; background:rgba(241,83,31,1);}
+.orderBox{position: absolute; left: 0; bottom: 0; right: 0; top: 94rpx;font-family:PingFang SC;font-weight:400;}
+.swiperheight{height: 100%; overflow: hidden; overflow-y: scroll; -webkit-overflow-scrolling: touch;}
+.orderList{display: flex; flex-direction: column; border-bottom: 24rpx solid rgba(244,244,244,1); }
+.orderListTop{display: flex; justify-content: space-between; font-size:24rpx; align-items: center; height: 84rpx; line-height: 84rpx; padding: 0 40rpx;}
+.orderListTop view:first-child{color:rgba(136,136,136,1);}
+.orderListTop view:last-child{color:rgba(51,51,51,1);}
+.orderListTop view.canceled{color: #B2B2B2}
+.orderListCenter{border-top: 2rpx solid rgba(244,244,244,1); border-bottom: 2rpx solid rgba(244,244,244,1); white-space: nowrap; font-size: 0; padding: 30rpx 0;}
+.orderListCenter image{width: 120rpx; height: 120rpx; margin-right: 16rpx;}
+.orderListCenter image:first-child{margin-left: 40rpx;}
+.orderListCenter image:last-child{margin-right: 40rpx;}
+.orderListBtm{padding: 0 40rpx; display: flex; justify-content: space-between; align-items: center; height: 100rpx; line-height: 100rpx;}
+.orderListBtm view:first-child{font-size:24rpx;color:rgba(51,51,51,1);}
+.orderListBtm view:first-child text{font-size:28rpx;font-weight:bold;color:rgba(241,83,31,1);}
+.orderListBtm view:last-child{width:140rpx; height:52rpx; line-height: 52rpx; background:rgba(241,83,31,1); border-radius:4px; text-align: center; font-size: 26rpx; color: rgba(255,255,255,1);}
+.noOrder{position: absolute; left: 50%; top: 20%; margin-left: -137rpx; width: 274rpx;}
+.noOrder image{width: 274rpx; height: 214rpx;}
+.noOrder view{text-align: center; font-size:24rpx;font-family:PingFang SC;font-weight:400;color:rgba(136,136,136,1); margin-top: 80rpx;}

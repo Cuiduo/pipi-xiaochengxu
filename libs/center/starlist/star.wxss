@@ -1,0 +1,11 @@
+/* components/star/star.wxss */
+.star{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.icon-star{
+  margin: 0 4rpx; 
+  width: 34rpx;
+  height: 34rpx;
+}

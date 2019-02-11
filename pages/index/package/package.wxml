@@ -1,0 +1,126 @@
+<!--pages/index/package/package.wxml-->
+<wxs src="./package.wxs" module="util" />
+
+<image wx:if='{{shareImg}}' class='shareimg' src='../../../images/shareimg.png' bindtap='goHome'></image>
+<view class='topBox'>
+  <view class='cover'></view>
+  <image src='{{mainImage}}'></image>
+  <view class='topText'>{{name}}</view>
+</view>
+<view class='containerview' wx:for="{{lists}}" wx:if="{{orno}}" wx:key="key" > 
+  <view class='deserve'>
+    <text class='times'>距结束</text>
+    <view class='timeview'>
+      <view class='time'>{{item.obj.hou}}</view><view class='colon'>:</view>
+      <view class='time'>{{item.obj.min}}</view><view class='colon'>:</view><view class='time'>{{item.obj.sec}}</view>
+    </view>
+  </view>
+</view>
+<view class='introduce'>
+  <view class='dapeiTitle'> 
+    <image class='dapei' src='../../../images/dapei.png'></image>
+    <text>黄金搭配</text>
+  </view>
+  <view class='contents'>
+    {{content1}}
+  </view>
+</view>
+<view class='introduce'>
+  <view class='dapeiTitle' style='border-bottom:1rpx dashed #61B6F8'> 
+    <image class='dapei' src='../../../images/yiju.png'></image>
+    <text style='color:#61B6F8'>科学依据</text>
+  </view>
+  <view class='contents'>
+    {{content2}}
+  </view>
+</view>
+<view class='introduce'>
+  <view class='dapeiTitle' style='border-bottom:1rpx dashed #A680FD'> 
+    <image class='dapei' src='../../../images/wenhua.png'></image>
+    <text style='color:#A680FD'>文化趣闻</text>
+  </view>
+  <view class='contents'>
+    {{content3}}
+  </view>
+</view>
+<view class='introduce'>
+  <view class='dapeiTitle' style='border-bottom:1rpx dashed #62CA61'> 
+    <image class='dapei' src='../../../images/yingyang.png'></image>
+    <text style='color:#62CA61'>营养成分</text>
+  </view>
+  <view wx:for="{{assaying}}" wx:key="key">
+    <view class='contentLine'>
+      <view class='assayingtitle'>维生素C(水果类)</view>
+    </view>
+    <view class='assayingLine'>
+      <view class='dotBox' style='left:{{item.percent}};transform: translateX(-{{dotLeft}})'>
+        <view class='dotName'>
+          {{item.name}}
+        </view>
+        <text class='dot'></text>
+      </view>
+      <view class='lines'>
+        <view class='line'></view>
+        <view>低</view>
+      </view>
+      <view class='lines'>
+        <view class='line linetwo'></view>
+        <view>中</view>
+      </view>
+      <view class='lines'>
+        <view class='line linethree'></view>
+        <view>高</view>
+      </view>
+    </view>
+  </view>
+  
+</view>
+<view class='goodsBox'>
+  <view class='goodsli'>
+    <!-- <view>
+      <image  src='../../../images/img1.png'></image>
+    </view> -->     
+    <view class='titleBox'>          
+        <view class='particulars'  wx:for="{{goods}}" wx:key="key">
+          <view class='detailBox'>
+            <image class='detailimg' src='{{item.mainImage}}'></image>
+            <image wx:if='{{isShow}}' class='soldOutImg' src='../../../images/xiajia.png'></image>
+            <view class='detailright'>
+              <view class='detailname {{isShow?"soldOut":""}}'>{{item.name}}</view>                
+              <view class='detailprice'>
+                <text>
+                  <text class='{{isShow?"soldOut":""}}'>￥</text>
+                  <text class='detailpriceBig {{isShow?"soldOut":""}}'>{{util.priceFn(item.currentAmount)[0]}}.</text>
+                  <text class='{{isShow?"soldOut":""}}'>{{util.priceFn(item.currentAmount)[1]}}</text>
+                </text>                  
+                <text class='yishou {{isShow?"soldOut":""}}'>原价￥{{item.sourceAmount}}</text>
+                <text class='carimg {{isShow?"soldOut":""}}'>×{{item.num}}</text>
+              </view>              
+            </view>
+          </view>         
+        </view>
+      </view>
+  </view>
+  <view class='bottomBox'>
+    <view class='bottomLeft'>
+      <text class='amount'>总额:</text><text style='font-size:24rpx;'>￥</text><text style='font-size:36rpx;'>{{util.priceFn(totalAmount)[0]}}</text><text style='font-size:24rpx;'>.{{util.priceFn(totalAmount)[1]}}</text>
+    </view>
+    <view class='pullCar' catchtap='pushCar'>{{shopCartext}}</view>
+    <view class='pullCar pullNew' bindtap='showShareBox'>推广邀新</view>      
+  </view>
+  <view wx:if='{{isShow}}' class='bottomBoxDown'>
+   已下架
+  </view>
+</view>
+<van-popup show="{{shareBox}}" style="bottom:200rpx;" position="bottom" bind:close="hideShareBox">
+  <view class='bottomli bottomone'>
+    <text class='cost'>为朋友买单</text><text class='share'>去请客</text>
+  </view>
+  <view class='bottomli'>
+    <text class='cost'>分享活动</text>   
+    <button class='share' bindtap='test'  open-type="share" hover-class="other-button-hover">        
+      <text>分享</text>
+    </button>
+  </view>
+</van-popup>
+

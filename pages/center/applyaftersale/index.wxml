@@ -1,0 +1,44 @@
+<!--pages/applyaftersale/index.wxml-->
+<view class='container'>
+    <view class='scrollcontent' style="height:{{windowHeight-91}}px;">
+      <view class='inputcontent'>
+        <textarea placeholder='请您在此描述问题，我们将尽快为您解决...' maxlength='100'  placeholder-style='placeholder'>
+        </textarea>
+      </view>
+      <view class='pictureview'>
+          <view class="grid col-4 grid-square flex-sub">
+             
+            <view class="padding-xs bg-img" style="background-image:url(https://image.weilanwl.com/img/square-1.jpg);">
+               <image class="deleteview" src='../../../images/delete_icon.png'></image>
+            </view>
+
+            <!-- <view class="padding-xs bg-img" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);">
+              <view >
+                <image class="deleteview" src='../../../images/delete_icon.png'></image>
+              </view>
+           </view> -->
+             <view class="padding-xs bg-img" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);">
+                 <image class="deleteview" src='../../../images/delete_icon.png'></image>
+             </view>
+              
+               <view class="padding-xs bg-img" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);">
+                <image class="deleteview" src='../../../images/delete_icon.png'></image>
+             </view>
+
+              <view class="padding-xs bg-img border">
+                
+                 <image  class='addview' src='../../../images/add_icon.png' bindtap='gotoShow'></image>
+                
+              </view>
+         </view>
+      </view>
+      <view class='tipview'>
+      请上传商品包装袋上的快递单图片及所有问题商品的图片。单张图片大小不超过5M，最多上传5张。
+      </view>
+   </view>
+
+    <view class='bottomview'>
+        <view class='bottom-tips'>提交后，售后专员可能与您电话沟通，请保持手机畅通      </view>
+        <view class='bottom-submit' bindtap='submitapplytap'>提交申请</view>
+    </view>
+</view>

@@ -1,0 +1,44 @@
+
+.title{padding: 40rpx;font-size: 40rpx;color: #201F24;}
+.articleAuthor{
+  padding: 30rpx 40rpx;
+  height: 42px;
+  line-height: 72rpx;
+}
+page {
+  padding-bottom: 80rpx;
+}
+.articleAuthor .collectImg{
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  float: left;
+}
+.articleAuthor text{
+  font-size: 30rpx;
+  color: #333333;
+  float: left;
+  margin-left: 30rpx;
+}
+.shareimg{position: fixed;right: 0;top: 50%;width: 96rpx;height: 96rpx;z-index: 999}
+/* page{position: relative} */
+.round{width: 100%;height: 800rpx;position: fixed;bottom: 100rpx; right: 20rpx;z-index: 100}
+.article{font-size: 30rpx;color: #333333;padding: 0 40rpx;line-height: 60rpx;}
+.egimgBox{padding: 40rpx;}
+.egimg{width: 100%}
+.round-click{height: 120rpx;width: 120rpx;  z-index: 1999;}
+.messageTit{padding: 40rpx;border-top: 1rpx solid #F4F4F4;margin-top: 40rpx;font-size: 30rpx;color: #333333;}
+.messageBox{overflow: hidden;padding-bottom: 60rpx;}
+.messageli{margin-bottom: 60rpx;padding: 0 40rpx;}
+.limg{float: left;width: 72rpx;}
+.limg image{width: 72rpx;height: 72rpx;}
+.linameBox{padding-top: 4rpx;height: 50rpx;}
+.rightBox{float: left;padding-left: 24rpx;width: 570rpx;}
+.liname{color: #666666;font-size: 26rpx;float: left;}
+.litime{color: #BEBEBE;font-size: 22rpx;float: right}
+.liContent{color: #666666;font-size: 30rpx;float: left;width: 570rpx;}
+.inputBox{padding: 18rpx 28rpx 18rpx;border-top: 1rpx solid #F4F4F4;height: 68rpx;line-height: 68rpx;background: #ffffff;position: relative}
+.inputContent{width: 480rpx;height: 68rpx;background: #F4F4F4;border-radius: 8rpx;font-size: 26rpx;float: left;padding-left: 80rpx}
+.postbt{padding-left: 50rpx;font-size: 30rpx;color: #999999;}
+.inputBox image{position: absolute;left: 60rpx;width: 32rpx;height: 32rpx;z-index: 11;bottom: 34rpx;}
+.fixedBottom{position: fixed;bottom: 0}

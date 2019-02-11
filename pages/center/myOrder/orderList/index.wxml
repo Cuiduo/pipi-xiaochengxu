@@ -1,0 +1,45 @@
+<scroll-view class='scrollBox'>
+  <view class='orderType'>
+    <view class='{{tabIndex == index ? "active" : ""}}' wx:for='{{tab}}' wx:key='{{index}}' data-index='{{index}}' bindtap='tabClick'><view>{{item.name}}</view></view>
+  </view>
+  <scroll-view class='orderBox'>
+    <swiper circular current='{{tabIndex}}' duration='300' bindchange='currentChange' style='height: 100%;'>
+      <block wx:for='{{tab}}' wx:key='{{index}}'> 
+        <swiper-item>
+          <!-- 订单列表 -->
+          <view class='swiperheight' style='display: none;'>
+            <view class='orderList'>
+              <view class='orderListTop'>
+                <view>2018-01-31 14:50:46</view>
+                <!-- <view>待支付/待收货/已完成</view> -->
+                <view class='canceled'>已取消</view>
+              </view>
+              <scroll-view class='orderListCenter' scroll-x>
+                <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+                <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+                <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+                <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+                <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+                <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+                <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+                <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+              </scroll-view> 
+              <view class='orderListBtm'>
+                <view>实付：<text style='font-size: 20rpx;'>¥</text><text>18.60</text></view>
+                <view>立即支付</view>
+                <!-- <view style='background: #FFB442'>确认收货</view> -->
+              </view>
+            </view>
+          </view>
+
+          <!-- 您还没有新的订单 -->
+          <view class='noOrder'>
+            <image src='/images/sun/empty.png' mode='scaleToFill' lazy-load></image>
+            <view>您还没有新的订单</view>
+          </view>
+
+        </swiper-item>
+      </block>
+    </swiper>
+  </scroll-view>
+</scroll-view>

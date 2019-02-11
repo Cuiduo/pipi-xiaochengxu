@@ -1,0 +1,65 @@
+<!--pages/aftersale/index.wxml-->
+<view class='container'>
+    <!-- 切换栏 -->
+    <view class='switchview'>
+    <view class="switchview-left {{currentindex===0 ? 'on' : 'off'}}" bindtap='applyAftersale'>售后申请</view>
+    <view class="switchview-right {{currentindex===1 ? 'on' : 'off'}}" bindtap='afterSalelist'>售后记录</view>
+   </view>
+    <!-- 视图栏 -->
+    <swiper current='{{currentindex}}' class='swiper-box' duration='300' style="height:{{windowHeight-44}}px;" bindchange='switchChange'>
+    <!-- 售后申请 -->
+      <swiper-item>
+         <scroll-view class="applyaftersale" scroll-y="true" scroll-with-animation="true" lower-threshold="1" >
+            <view class='applyaftersale-item' wx:for="{{applyAftersaleList}}" wx:key="{{index}}">
+                <view class='item-timeview'>
+                   <text>{{item.creattime}}</text>
+                </view>
+                <!-- 图片列表  -->
+                <scroll-view class='item-listview' scroll-x="true" scroll-with-animation="true" lower-threshold="1" >
+                <image wx:for="{{item.images}}" wx:key="{{index}}" src='{{item}}'  mode="aspectFill" data-url='{{item}}' class="item-listview-image  {{index === 0  ? 'firstimage' : ''}}" ></image>
+                <text class='lastext'></text>
+                </scroll-view>
+                <!-- 申请售后 -->
+                <view class='item-oprationview'>
+                  <view class='item-oprationview-left'>
+                     <text style='font-size:24rpx;color:#333333'>实付：</text>           
+                     <text style='font-size:20rpx;color:#F1531F;'>￥</text>{{item.realypay}}
+                  </view> 
+                   <view class='item-oprationview-right' bindtap='applyaftersaleTap' data-index="{{index}}">
+                        申请售后
+                   </view>
+                </view>
+                <!-- 底部灰色区域 -->
+                <view class='item-bottomview'>
+                </view>
+            </view>
+           
+         </scroll-view>
+      </swiper-item>
+     <!-- 售后记录 -->
+      <swiper-item>
+          <scroll-view class="aftersalelist" scroll-y="true"  scroll-with-animation="true" lower-threshold="1" >
+              <view class='aftersalelist-item' wx:for="{{afterSalelistList}}" wx:key="{{item}}">
+                  <!-- 顶部时间 -->
+                 <view class='aftersalelist-item-head'>
+                   <view class='aftersalelist-item-head-time'> {{item.creattime}}</view>
+                   <view class='aftersalelist-item-head-status'> {{item.status}}</view>
+                 </view>
+                  <!-- 内容部分 -->
+                  <view class='aftersalelist-item-bottom'>
+                    <view class='aftersalelist-item-bottom-left'>
+                         <image src='{{item.images}}' mode="aspectFill" data-url='{{item.images}}'></image>
+                    </view>
+                    <view class='aftersalelist-item-bottom-right'>
+                        <view class='aftersalelist-item-bottom-right-title'>{{item.title}}</view>
+                        <view class='aftersalelist-item-bottom-right-num'>x{{item.nums}}</view>
+                    </view>
+                  </view>
+                    <!-- 底部灰色区域 -->
+                  <view class='item-bottomview'>
+                  </view>
+              </view>
+          </scroll-view>
+      </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,158 @@
+<!-- 函数与常量 -->
+<wxs src="../wxs/index.wxs" module="indexTool" />
+<!-- 根布局 -->
+<view class='root' bindtouchstart='hideFoodPop'>
+
+  <!-- 导航区域 -->
+  <view id='id_navBar' class='{{isNavFloating?"nav-floating":"nav"}}' catchtouchmove='noop'>
+    <!-- 地址模块 -->
+    <view class='nav-address' catchtap="chooseAddress">
+      <image class='ic-address' src='{{indexTool.addressIconPath}}' mode='widthFix'></image>
+      <text class='nav-address-tv'>{{addressData.name}}</text>
+      <image class='ic-down' src='{{indexTool.downIconPath}}' mode='widthFix'></image>
+    </view>
+    <!-- 症状模块 -->
+    <view class='nav-symptom'>{{symptom.symptomName}}</view>
+    <!-- 货架、分享、筛选模块 -->
+    <view class='nav-action'>
+      <image class='ic-action' src='{{indexTool.filterIconPath}}' mode='widthFix' catchtap='filter'></image>
+      <button class='bt-share' open-type="share" hover-class='none'>
+        <image class='ic-action' src='{{indexTool.shareIconPath}}' mode='widthFix'></image>
+      </button>
+      <!-- <image class='ic-action' src='{{indexTool.shelfIconPath}}' mode='widthFix' catchtap='shelf'></image> -->
+    </view>
+  </view>
+  <!-- 说明区域 -->
+  <view class='explain'>
+    <block wx:for='{{indexTool.explains}}' wx:key='iconPath'>
+      <view class='explain-item'>
+        <image class='ic-explain' src='{{item.iconPath}}' mode='widthFix'></image>
+        <text>{{item.content}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 提示区域 -->
+  <text class='tip'>{{indexTool.tip}}</text>
+  <!-- 食材表表头区域 -->
+  <view id='id_tabSticky' class='{{isTabSticky?"tab-sticky":"tab"}}' style='top:{{isNavFloating?84:0}}rpx' catchtouchmove='noop'>
+    <!-- 类别模块 -->
+    <view class='tab-title-head'>
+      <text>{{indexTool.titleName}}</text>
+    </view>
+    <!-- 分类食材 -->
+    <view class='tab-content'>
+      <block wx:for='{{indexTool.tabIconsPath}}' wx:key='*this'>
+        <view class='.tab-content-item-head'>
+          <image class='ic-tab' src='{{item}}' mode='widthFix'></image>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 食材表内容区域 -->
+  <block wx:for='{{foodsData}}' wx:key='level'>
+    <view class='tab'>
+      <!-- 类别模块 -->
+      <view id='id_{{item.level}}' class='{{index+1==foodsData.length?"tab-title-last":"tab-title"}}' style='background:{{item.levelColor}}'>
+        <text>{{item.levelName}}</text>
+      </view>
+      <!-- 分类食材模块 -->
+      <view>
+        <view class='tab-content'>
+          <block wx:for='{{item.foodCategoryList}}' wx:for-item='categoryItem' wx:for-index='categoryIndex' wx:key='categoryId'>
+            <view class='width-match-parent'>
+              <block wx:for='{{categoryItem.foodList}}' wx:for-item='foodItem' wx:for-index='foodIndex' wx:key='foodId'>
+                <view class='tab-content-item' style='background:{{foodIndex%2==0?item.levelColor:0}}' catchtap='clickFood' catchlongpress='longPressFood' data-ids='{{[item.level,categoryItem.categoryId,foodItem.foodId]}}' data-indexs='{{[index,categoryIndex,foodIndex]}}'>
+                  <!-- 食材名 -->
+                  <text>{{foodItem.foodName}}</text>
+                  <!-- 红点 -->
+                  <block wx:if='{{foodItem.promotionFlag==1}}'>
+                    <view class='dot'></view>
+                  </block>
+                </view>
+              </block>
+            </view>
+          </block>
+        </view>
+        <!-- 加载更多模块 -->
+        <view class='{{index+1==foodsData.length?"tab-more-last":"tab-more"}}' style='background:{{item.levelColor}}' catchtap='loadMore' data-index='{{index}}'>
+          <text>{{indexTool.loadMoreContent[item.loadMore]}}</text>
+          <image src='{{indexTool.loadMoreIconPath}}' hidden='{{item.loadMore!=1}}' class='ic-more' mode='widthFix'></image>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- 长按食材弹窗 -->
+<view class='{{foodPop.foodPopStyle}}' style='left:{{foodPop.offsetLeft}}px;top:{{foodPop.offsetTop}}px;' hidden='{{!foodPop.show}}' catchtouchmove='noop'>
+  <!-- 小三角 -->
+  <view class='{{foodPop.moreHalfWindowHeight?"foodPop-triangle-bottom":"foodPop-triangle-top"}}'></view>
+  <!-- 置顶、不喜欢 -->
+  <view class='foodPop-content'>
+    <text class='foodPop-content-tv' catchtap='topFood'>{{indexTool.top}}</text>
+    <view class='foodPop-content-line' />
+    <text class='foodPop-content-tv' catchtap='dislikeFood'>{{indexTool.dislike}}</text>
+  </view>
+</view>
+
+<!-- 左侧索引 -->
+<view class='index' bindtouchstart='hideFoodPop'>
+  <block wx:for='{{foodsData}}' wx:key='level'>
+    <!-- 分割线 -->
+    <block wx:if='{{index!=0}}'>
+      <view class='index-line' style='top:{{index*90}}rpx' />
+    </block>
+    <!-- 索引名称 -->
+    <view class='{{index==0?"index-item-first":index+1==foodsData.length?"index-item-last":"index-item"}}' hover-class='index-item-press' hover-stay-time='200' bindtap='scrollToIndex' catchtouchmove='noop' data-level='{{item.level}}'>
+      <text>{{item.level}}</text>
+    </view>
+  </block>
+</view>
+
+<!-- 底部弹窗 -->
+<van-popup show='{{bottomSheet.show}}' position='bottom' custom-class='sheet' bind:close='hideBottomSheet'>
+  <!-- 标题模块 -->
+  <view class='sheet-title'>
+    <image src='{{indexTool.closeIconPath}}' class='ic-close' mode='widthFix' catchtap='hideBottomSheet'></image>
+    <view class='sheet-title-prority'>
+      <block wx:for='{{indexTool.prority}}' wx:key='id'>
+        <block wx:if='{{index!=0}}'>
+          <view class='sheet-title-prority-line' />
+        </block>
+        <!-- 优先级名称 -->
+        <text class='{{item.id==prority.id?"prority-tv-yes":"prority-tv-no"}}' catchtap='switchPrority' data-prority='{{item}}'>{{item.name}}</text>
+      </block>
+    </view>
+  </view>
+  <view class='sheet-line' />
+  <!-- 商品模块 -->
+  <scroll-view scroll-y='true' class='sheet-content' scroll-top='{{goodsScrollTop}}'>
+    <view class='sheet-content-in'>
+      <block wx:for='{{goodsData}}' wx:key='goodsId'>
+        <view class='goods'>
+          <!-- 商品图 -->
+          <image src='{{item.goodsImage}}' class='ic-goods' mode='widthFix' lazy-load='true'></image>
+          <view class='goods-content'>
+            <!-- 商品名 -->
+            <text class='goods-name'>{{item.goodsName}}</text>
+            <view class='goods-content-in'>
+              <view class='goods-price'>
+                <!-- 售价 -->
+                <text class='price-a'>{{indexTool.rmb}}</text>
+                <text class='price-b'>{{indexTool.partPrice(item.price,0)}}</text>
+                <text class='price-c'>{{indexTool.partPrice(item.price,1)}}</text>
+                <!-- 划线价 -->
+                <block wx:if='{{item.price!=item.originalPrice}}'>
+                  <text class='price-d'>{{indexTool.originalPrice+item.originalPrice}}</text>
+                </block>
+              </view>
+              <!-- 购物车icon -->
+              <image src='{{indexTool.shopIconPath}}' class='ic-shop' mode='widthFix' catchtap='addCart' data-id_goods='{{item.goodsId}}'></image>
+            </view>
+          </view>
+        </view>
+        <view class='goods-line' />
+      </block>
+    </view>
+  </scroll-view>
+</van-popup>

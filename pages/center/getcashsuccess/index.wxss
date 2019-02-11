@@ -1,0 +1,64 @@
+/* pages/getcashsucess/index.wxss */
+.container
+{
+  background-color: #ffffff;
+}
+
+.topview
+{
+  border-top: 2rpx solid #f4f4f4;
+  display: flex;
+  direction: column;
+  margin-top: 0;
+  width: 750rpx;
+  height: 570rpx;
+ 
+}
+
+.success-icon
+{
+  position: absolute;
+  width: 240rpx;
+  height: 200rpx;
+  margin-top: 100rpx;
+  margin-left: 264rpx;
+}
+.tips1
+{
+  position: absolute;
+  margin-top: 370rpx;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 32rpx;
+  color: #333333;
+  /* background-color: red; */
+  text-align: center;
+}
+.tips2
+{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 432rpx;
+  font-size: 26rpx;
+  color: #888888;
+  text-align: center;
+}
+
+.backview
+{
+  margin-left: 70rpx;
+  margin-right: 70rpx;
+  width: 610rpx;
+  margin-top: 0rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-radius: 46rpx;
+  background-color: #51535E;
+  text-align: center;
+  font-size: 30rpx;
+  color: #FDD494;
+}
+
+

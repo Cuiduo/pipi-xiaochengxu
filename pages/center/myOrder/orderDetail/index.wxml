@@ -1,0 +1,44 @@
+<scroll-view class='scrollBox' scroll-y>
+  <view class='top'>
+    <image class='topImage' src='/images/sun/time.png' mode='scaleToFill' lazy-load></image>
+    <view class='topCenter'>
+      <view class='orderStatus'>待支付</view>
+      <view class='orderTime'>2018/12/25  00:01后自动取消订单</view>
+    </view>
+    <view class='topBtn'>取消订单</view>
+  </view>
+  <view class='orderDest'>
+    <view>许君雅<text>13501251221</text></view>
+    <view>北京市朝阳区建外大街外交公寓4号门11号楼1611室</view>
+  </view>
+  <view class='orderD'>
+    <view class='orderTitle'>商品详细</view>
+    <view class='foodList'>
+        <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+        <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+        <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+        <image src='/images/sun/img1.png' mode='scaleToFill' lazy-load></image>
+        <view>共20件<image src='/images/sun/right1.png' mode='scaleToFill' lazy-load></image></view>
+    </view>
+    <view class='orderNumber'>
+      <view>订单编号：256489752645</view>
+      <view>下单时间：2019-01-09   10:26:23</view>
+      <view>如遇配送或商品质量等问题，请及时联系客服。</view>
+      <view>配送方式：<text>京东配送</text></view>
+    </view>
+    <view class='orderPrice'>
+        <view class='orderPriceItem'><view>商品总价</view><view>￥198.00</view></view>
+        <view class='orderPriceItem'><view>优惠</view><view>￥198.00</view></view>
+        <view class='orderPriceItem'><view>运费减免</view><view>￥198.00</view></view>
+        <view class='orderPriceItem'><view>包装费</view><view>￥198.00</view></view>
+        <view class='orderPriceItem'><view>包装费减免</view><view>￥198.00</view></view>
+    </view>
+    <view class='priceTotal'>合计：￥190.00</view>
+  </view>
+
+  <view class='bottom'>
+    <view class='bottomTotal'>实付款：￥<text>134</text>.00</view>
+    <view class='bottomPay'>去支付</view>
+  </view>
+</scroll-view>
+

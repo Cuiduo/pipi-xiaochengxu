@@ -1,0 +1,14 @@
+<scroll-view class='scrollBox' scroll-y>
+  <view class='item1'><image src='/images/sun/img_success.png' mode='scaleToFill' lazy-load></image></view>
+  <view class='item2'>支付成功！</view>
+  <view class='item3'>￥134</view>
+  <view class='item4' style='margin-top:80rpx;'>查看订单</view>
+  <view class='item5'>推广邀新</view>
+  <view class='bottom'>
+    <image class='btmImg1' src='/images/sun/img2.png' mode='scaleToFill' lazy-load></image>
+    <view>
+      <view class='btnTxt'>这次健康购物体验，你满意吗？</view>
+      <view></view>
+    </view>
+  </view>
+</scroll-view>  

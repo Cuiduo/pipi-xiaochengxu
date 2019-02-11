@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "PiPi健康",
+  "usingComponents": {
+    "star": "../../../libs/center/starlist/star"
+  }
+  
+}

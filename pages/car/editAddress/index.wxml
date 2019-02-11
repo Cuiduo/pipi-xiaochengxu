@@ -1,0 +1,73 @@
+<scroll-view scroll-y>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='formBox'>
+      <view class='formTitle'>收货人</view>
+      <view class='formInput'>
+        <input placeholder="请填写收货人" type='text' name='name' value='{{info.name}}'/>
+      </view>
+    </view>
+    <view class='formBox'>
+      <view class='formTitle'>联系方式</view>
+      <view class='formInput'>
+        <input placeholder="请填写联系电话" type='number' name='mobile' value='{{info.mobile}}' maxlength='11'/>
+      </view>
+    </view>
+    <view class='formBox'>
+      <view class='formTitle'>所在地区</view>
+      <view class='formInput'>
+        <picker mode="selector" bindchange="bindRegionChange" range="{{dest}}" range-key="name" value='{{destIndex}}' name='provinceCode'>
+          <view class="picker" style='font-size:30rpx; color:rgba(87,107,149,1); height: 110rpx;'>
+            {{dest[destIndex].name}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='formBox'>
+      <view class='formTitle'>市</view>
+      <view class='formInput'>
+        <picker mode="selector" bindchange="bindRegionChange" range="{{dest}}" range-key="name" value='{{destIndex}}' name='cityCode'>
+          <view class="picker" style='font-size:30rpx; color:rgba(87,107,149,1); height: 110rpx;'>
+            {{dest[destIndex].name}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='formBox'>
+      <view class='formTitle'>区/县</view>
+      <view class='formInput'>
+        <picker mode="selector" bindchange="bindRegionChange" range="{{dest}}" range-key="name" value='{{destIndex}}' name='districeCode'>
+          <view class="picker" style='font-size:30rpx; color:rgba(87,107,149,1); height: 110rpx;'>
+            {{dest[destIndex].name}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='formBox'>
+      <view class='formTitle'>乡镇/街道</view>
+      <view class='formInput'>
+        <picker mode="selector" bindchange="bindRegionChange" range="{{dest}}" range-key="name" value='{{destIndex}}' name='streetCode'>
+          <view class="picker" style='font-size:30rpx; color:rgba(87,107,149,1); height: 110rpx;'>
+            {{dest[destIndex].name}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='formBox'>
+      <view class='formTitle'>详细地址</view>
+      <view class='formInput'>
+        <input placeholder="楼号、单元、门牌号" type='text' name='detailAddress' value='{{info.detailAddress}}'/>
+      </view>
+    </view>
+    <view class='formBox'>
+      <view class='formTitle'>选择标签</view>
+      <view class='formInput' style='display: flex'>
+        <view class='labelType {{info.tag == item.value ? "active": ""}}' wx:for='{{label}}' wx:key='{{item.value}}' bindtap='tabLabel' data-index='{{item.value}}'>{{item.name}}</view>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button form-type="submit">保存</button>
+      <button class='deleteDest' bindtap='deleteDest' wx:if='{{!isAddDest}}'>删除地址</button>
+    </view>
+  </form>
+</scroll-view>
+

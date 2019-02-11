@@ -1,0 +1,63 @@
+<!--pages/myearning/index.wxml-->
+
+<view class='contanier'>
+  <view class='header'>
+
+    <!-- 顶部昵称部分 -->
+    <view class='head-top'>
+      <text class='nickname'>{{nickname}}</text>
+      <image  class='getcashlisticon' src='../../../images/earningsgetcashlist.png' bindtap='getcashlisttap'></image>
+      <image  class='getcashicon' src='../../../images/earningsgetcash.png' bindtap='getcashtap'></image>
+    </view>
+
+    <!-- 中间部分 -->
+    <view class='earnings'>
+       <text class='earnings-tips'>可提现余额</text>
+        <view class='earnings-price'>
+           <text style='font-size:30rpx;font-weight:bold;'>￥</text>
+           <text style='font-size:70rpx;font-weight:bold;'>{{value1}}</text>
+           <text style='font-size:30rpx;font-weight:bold;'>.</text>
+           <text style='font-size:30rpx;font-weight:bold;'>{{value2}}</text>
+        </view>
+    </view>
+
+    <!-- 底部部分 -->
+    <view class='head-bottom'>
+      <view class='bottom-sqrcode-view'>
+        <image  class='bottom-sqrcode' src='../../../images/earningscode.png'></image>
+      </view>
+      <view class='head-bottom-rightview'>
+         <view class='bottom-text'>￥{{totalbalance}}
+         </view>
+           <image  class='head-bottom-icon' src='../../../images/earningsicon.png'></image>
+         </view>
+    </view>
+  </view>
+
+  <view class='centerview'>
+    <view class="centerview-left {{currentindex===0 ? 'on' : 'off'}}" bindtap='hasreturn'>已返收益</view>
+    <view class="centerview-right {{currentindex===1 ? 'on' : 'off'}}" bindtap='futurereturn'>预计收益</view>
+   </view>
+
+   <view class='bottomview'>
+     <!-- 列表 -->
+     <view class='list-item' wx:for-items="{{currentindex===0 ? hasreturnlist : futurereturnlist }}"  wx:key="{{item}}">
+     <!-- 左侧内容 -->
+     <view class='leftcontent'>
+        <view class='left_top_text'>订单编号：{{item.orderid}}</view> 
+        <view class='left_bottom_text'>{{item.creattime}}</view> 
+     </view>
+     <!-- 右侧内容 -->
+     <view class='rightcontent'>
+        <view class='right_text1'>
+        <text style='font-size:40rpx;font-weight:bold;'>+</text>
+        <text style='font-size:26rpx;font-weight:bold;' class='right_text1-centertext'>￥</text>
+        <text style='font-size:40rpx;font-weight:bold;'>{{item.changenum}}</text>
+        </view> 
+        <view class='right_text2' hidden="{{currentindex===0 ? true : false }}">预计：</view> 
+     </view>
+   </view>
+  </view>
+
+</view>
+

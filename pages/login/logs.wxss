@@ -1,0 +1,11 @@
+/* pages/login/logs.wxss */
+.loginbg{width: 520rpx;display: flex;margin: 90rpx auto;position: relative;}
+.logimg{width: 520rpx;height: 458rpx;}
+.logtext{color: #464851;font-size: 30rpx;position: absolute;bottom: 96rpx;left: 50%;margin-left: -50rpx}
+.getBox{width: 70%;height: 84rpx;border-radius: 48rpx;border: 1rpx solid #B2B2B2;margin: 0 auto}
+.getInfo::after {border: none;}
+.getInfo{background: #ffffff;width: 520rpx;display: flex;  flex-direction: row;align-items: center; justify-content: center;border-radius: 80rpx;height: 84rpx;}
+.btnImg { width: 52rpx; height: 42rpx;margin-right: 12rpx;}
+.agreement{width: 100%;font-size: 22rpx;color: #B2B2B2;text-align: center;padding-top: 102rpx;}
+.agreement text{color: #E3B56D;}
+.bottom{width: 100%;font-size: 22rpx;color: #E3B56D;text-align: center;padding-top: 6rpx;}

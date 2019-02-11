@@ -1,0 +1,123 @@
+/* pages/applyaftersalelist/index.wxss */
+
+.container{
+  background-color: #ffffff;
+}
+.time{
+  border-top: 2rpx solid #f4f4f4;
+  width: 100%;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+}
+.time text
+{
+  margin-left: 40rpx;
+  font-size: 24rpx;
+  color: #888888;
+}
+
+.goods-item
+{
+  float: left;
+  margin-left: 40rpx;
+  height: 238rpx;
+  line-height: 238rpx;
+  width: 710rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+}
+
+.goods-item-left
+{
+   margin-left: 0rpx;
+   height: 100%;
+   width: 200rpx;
+   display: flex;
+   direction: row;
+}
+.goods-item-left image
+{
+    width: 176rpx;
+    height: 176rpx;
+    margin-top: 30rpx;
+    margin-left: 0rpx;
+}
+.goods-item-center
+{
+    float: left;
+    position: relative;
+    margin-right: 0rpx;
+    width: 330rpx;
+    line-height: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.goods-item-center-title
+{
+  position: relative;
+  padding: 0;
+  width: 100%;
+  font-size: 26rpx;
+  margin-top: 30rpx;
+  color: #333333;
+}
+.goods-item-center-pice
+{
+  position: absolute;
+  width: 100%;
+  font-size: 26rpx;
+  margin-bottom:30rpx;
+  color: #333333;
+  bottom: 0;
+  margin-left: 0rpx;
+}
+.goods-item-right
+{
+  float: left;
+  position: relative;
+  margin-right: 40rpx;
+  margin-left: 0rpx;
+  width: 140rpx;
+  line-height: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+.goods-item-right-num
+{
+  margin-right: 0rpx;
+  font-size: 30rpx;
+  color: #323232;
+  text-align: right;
+  margin-top: 30rpx;
+}
+.goods-item-right-status
+{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 32rpx;
+  width: 140rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 26rpx;
+  color: #E3B56D;
+  text-align: right;
+  z-index: 1;
+}
+.goods-item-right-applybtn
+{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 32rpx;
+  width: 140rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  font-size: 26rpx;
+  color: #ffffff;
+  background-color: #FFB442;
+  border-radius: 8rpx;
+  text-align: center;
+  z-index: 2;
+}

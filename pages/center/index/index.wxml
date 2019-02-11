@@ -1,0 +1,126 @@
+<view class="container">
+
+<!-- 顶部视图 -->
+  <view class='topcontainer'>
+      <!-- 灰色视图 -->
+      <view class='info-gray'>
+      </view>
+      <!-- 个人信息容器 -->
+      <view class='info-container'>
+        <view class='userinfo'>
+            <!-- 用户头像 -->
+            <image class='userinfo-avatar' src='{{data.avatar}}' background-size="cover"></image>
+            <!-- 用户信息 -->
+            <view class='userinfo-info'>
+              <view class='userinfo-nickname'>{{data.nickname}}</view> 
+              <view class='button-members' bindtap='membertap' hidden='{{data.memberFlag===1 ? false : true}}' ><image src='../../../images/members.png'></image><text>会员</text></view> 
+              <view class="userinfo-phone  {{data.mobile.length===0 ? '' : 'disabled'}}" bindtap='phonenumtap'>{{data.mobile.length===0 ? '请绑定手机号' : data.mobile }}</view>
+            </view>
+
+            <!-- 邀请码 -->
+            <view class='infocode'>
+              <text>邀请码:</text>
+              <text class='code'>{{data.inviteCode}}</text>
+              <button class='button-copy' bindtap='copyinvicode'>复制</button>
+            </view>
+        </view >
+        <!-- 操作入口 -->
+        <view class='operation'>
+          
+          <view class='operation-item first' bindtap='earningstap'>
+            <image src='../../../images/money.png'></image>
+            <text>收益</text>
+          </view>
+          <view class='operation-item' bindtap='fanstap'>
+            <image src='../../../images/fans.png'></image>
+            <text>粉丝</text>
+          </view>
+          <view class='operation-item' bindtap='ordertap'>
+            <image src='../../../images/order.png'></image>
+            <text>订单</text>
+          </view>
+          
+          <view class='operation-item' bindtap='aftersales'>
+            <image src='../../../images/shouhou.png'></image>
+            <text>售后服务</text>
+         </view>
+      
+      </view>
+       
+
+      <!-- 收益详情 -->
+      <view class='earnings'>
+        <text class='earnings-tips'>可提现余额</text>
+        <view class='earnings-price'>
+           <text style='font-size:26rpx;font-weight:bold;'>￥</text>
+           <text style='font-size:50rpx;font-weight:bold;'>{{value1}}</text>
+           <text style='font-size:26rpx;font-weight:bold;'>.</text>
+           <text style='font-size:26rpx;font-weight:bold;'>{{value2}}</text>
+        </view>
+        <text class='earnings-totaltips'>累计收益：</text>
+        <text class='earnings-total'>￥{{data.totalAmount}}</text>
+        <button class='getcash' bindtap='getcashtap'>立即提现</button>
+      </view>
+      
+    </view>
+  </view>
+    
+    
+  <!-- 功能列表 -->
+  <!-- 收货地址 -->
+  <view class='list-item' bindtap='addresslisttap'>
+   <view class='list-right'>
+    <text>收货地址</text>
+     <view class='address' >{{data.address}}</view>
+     <view>
+       <image src='../../../images/more.png' class='listimage'></image>
+     </view>
+     
+   </view>
+   
+  </view>
+  <!-- 收藏 -->
+  <view class='list-item' bindtap='collectiontap'>
+    <view class='list-right'>
+     <text>我的收藏</text>
+     <view>
+       <image src='../../../images/more.png' class='listimage'></image>
+     </view>
+    </view>
+  </view>
+    <!-- 客服 -->
+  <view class='contactserver-item'>
+      <button open-type='contact' class='contactserver'>
+      <view class='list-right'>
+        <text class='server-text'>联系客服</text>
+          <view>
+          <image src='../../../images/more.png' class='listimage'></image>
+          </view>
+      </view>
+      </button>
+  </view>
+    <!-- 已经成为粉丝的不展示该条目 -->
+  <view class='list-item' bindtap='inputinvitatcodetap' wx:if="{{hasUpper===0}}">
+    <view class='list-right'>
+      <text>输入邀请码</text>
+      <view>
+       <image src='../../../images/more.png' class='listimage'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 邀请码输入框 -->
+<i-modal  visible="{{ visibleinput }}" bind:ok="handleInputviewsure" bind:cancel="handleInputviewClose">
+ <input placeholder='请输入邀请码' placeholder-style="color:#B2B2B2" class='input' focus="{{ visibleinput == true ? true : false }}"  bindinput='bindinvitavalue' />
+</i-modal>
+
+<!-- 输入邀请码成功提示 -->
+<i-success  visible="{{ visiblesuccess }}" bottomtitle="好哒" bind:ok="hasVerifiCode">
+ <view class='successview'>
+   <view class='successview-left-tips'>已成为</view>
+   <view class='successview-image'><image src='{{inviter.upperUserAvatar}}'></image></view>
+   <view class='successview-nickname'>{{inviter.upperUserNickname}}</view>
+   <view class='successview-right-tips'>的粉丝</view>
+ </view>
+</i-success>

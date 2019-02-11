@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "PiPi智能食材表",
+  "usingComponents": {
+    "van-popup": "../../../dist/popup/index"
+  }
+}

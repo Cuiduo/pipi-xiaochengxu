@@ -1,0 +1,138 @@
+<!--pages/optimization/goods/goods.wxml-->
+ <view class='adressBox'>
+  <view>
+    <image src='../../../images/adress.png'></image>
+    <text>建国门...</text>
+    <image class='littleDown' src='../../../images/littleDown.png'></image>
+  </view>  
+  <view>
+    
+  </view>
+</view>
+<view class=''>
+
+</view>
+<view class="btn_jump">
+  <view class='btn_item' bindtap='jumpTo'>
+    <image src='../../../images/shucai.png'></image>
+  </view>
+  <view class='btn_item' bindtap='jumpTo'>
+    <image src='../../../images/shuiguo.png'></image>
+  </view>
+  <view class='btn_item' bindtap='jumpTo' >
+    <image src='../../../images/roulei.png'></image>
+  </view>
+  <view class='btn_item' bindtap='jumpTo'>
+    <image src='../../../images/gushu.png'></image>
+  </view>
+  <view class='btn_item' bindtap='jumpTo' >
+    <image src='../../../images/dadou.png'></image>
+  </view>
+</view>
+
+<scroll-view class="jump_list"
+    scroll-into-view="{{toView}}" 
+    scroll-y="true" 
+    scroll-with-animation="true" >
+    <view class='tipstop'>
+        <text class='tipsname'>Tips</text><text class='tipstext'>乌鸡中的铁元素及微量元素极为丰富，经常食用可以提高生理机能、延缓衰老、强筋健骨。对防治骨质疏松、佝偻病、妇缺铁性贫血症等有明显功效</text>
+      
+    </view>
+    <view class='meiri'>
+      <image src='../../../images/titleft.png'></image><text>每日上新</text>
+      <image src='../../../images/titleright.png'></image>
+    </view>
+  <view wx:for="{{1}}" wx:key="{{item}}" id="item{{item}}" class="list_item" >      
+      <view class='titleBox'>        
+        <view class='title'>
+          <image class='titimg' src='../../../images/vegetables.png'></image>
+          <text class='titlename'>蔬菜类</text>
+          <text class='specification'>营养素含量以每100g可食部计</text>
+          <image class='change' src='../../../images/change.png'></image>
+        </view>
+        <view class='particulars'  wx:for="{{1}}">
+          <view class='detailBox'>
+            <image class='detailimg' src='../../../images/eg.png'></image>
+            <view class='detailright'>
+              <view class='detailname'>固始乌鸡 1只 约1.5kg</view>
+              <view class='detaillable'>
+                <text class='lablehigh'>低脂肪(2.3g)</text>
+                <text>低热量</text>
+                <text>低碳水</text>
+              </view>
+              <view class='detailprice'>
+                <text>￥</text>
+                <text class='detailpriceBig'>68.</text>
+                <text>00</text>
+                <text class='yishou'>已售3722份</text>
+                <image class='carimg' src='../../../images/shoppingcart.png'></image>
+              </view>              
+            </view>
+          </view>         
+          <view class='tipsBox'>
+              <text class='tipsname'>Tips</text><text class='tipstext'>乌鸡中的铁元素及微量元素极为丰富，经常食用可以提高生理机能、延缓衰老、强筋健骨。对防治骨质疏松、佝偻病、妇缺铁性贫血症等有明显功效</text>
+            <image class='down' src='../../../images/unfold.png'></image>
+          </view>
+        </view>
+      </view>
+  </view>
+  <view class='meiri'>
+    <image src='../../../images/titleft.png'></image><text>热卖排名</text>
+    <image src='../../../images/titleright.png'></image>
+  </view>
+  <view class='hotSale'>
+    <view class='hotDetail' wx:for="{{4}}">
+      <image class='hotdetailimg' src='../../../images/img22.png'></image>
+      <view class='hotdetailname'>陕西洛川苹果红富士约4kg</view>
+      <view class='hotdetailprice'>
+        <text>￥</text><text class='hotbig'>49.</text><text>00</text><text class='alreadyself'>已售3722份</text><image class='hotCar' src='../../../images/shoppingcart.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='meiri'>
+    <image src='../../../images/titleft.png'></image><text>人气组合</text>
+    <image src='../../../images/titleright.png'></image>
+  </view>
+  <view class='liBox'>
+    <view class='containerview'>
+      <text>限时推广</text>
+      <text class='times'>距结束</text>
+      <view class='timeview'>
+        <text class='time'>12</text><text class='colon'>:</text>
+        <text class='time'>12</text><text class='colon'>:</text><text class='time'>12</text>
+      </view>
+      <view class='deserve'>
+        <text>
+          值得买<text>(3722)</text>
+        </text>
+      </view>
+    </view>
+    <view class='limitBox'>
+      <image src='../../../images/img1.png'></image>
+      <text class='priceBox'>￥<text class='activityprice'>58 </text> <text class='originalPrice'>￥64</text></text>
+      <text class='packageName'>葡萄+奶酪=窈窕秘方</text>
+      <view></view>
+    </view> 
+    <view class='standardBox'>
+      <image src='../../../images/logo1.png'></image>
+      <view class='titileBox'>
+        <view>食材由京东生鲜提供</view>
+        <view class='alreadySelf'>已售3722份</view>
+      </view>
+      <view class='btnBox'>
+        <text class='snapUp'>抢购</text>
+        <text class='InviteNew' bindtap="_onShow">邀新</text>
+      </view>    
+    </view> 
+    <view class='gradeBox'>
+      <image src='../../../images/star.png'></image>
+      <image src='../../../images/star.png'></image>
+      <image src='../../../images/star.png'></image>
+      <image src='../../../images/star.png'></image>
+      <image src='../../../images/star.png'></image>
+      <text>（1024）</text>
+    </view>
+    <view class='lineBox'></view>
+  </view>
+</scroll-view>
+

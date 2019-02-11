@@ -1,0 +1,78 @@
+/**
+ * 将价格拆分成整数部分或小数部分返回
+ * price：价格
+ * index：0 整数部分，1 小数部分（包含小数点）
+ */
+function splitPrice(price, index) {
+  var priceArr = price.split(".");
+  var partPrice = priceArr[index]
+  if (index == 1) {
+    partPrice = "." + partPrice;
+  }
+  return partPrice;
+}
+
+/**
+ * 暴露数据
+ */
+module.exports = {
+  /**
+   * 处理数据的函数返回值
+   */
+  partPrice: splitPrice,
+  /**
+   * 页面中的final常量
+   */
+  addressIconPath: '../../../images/adress.png',
+  downIconPath: '../../../images/littleDown.png',
+  loadMoreIconPath: '../../../images/loadmore.png',
+  loadMoreContent: ['没有更多了', '点击加载更多'],
+    shelfIconPath:'../../../images/shelf.png',
+    shareIconPath:'../../../images/share.png',
+    filterIconPath: '../../../images/filter.png',
+  explains: [{
+      iconPath: '../../../images/food.png',
+      content: '食材：低脂肪、低热量、低升糖和高优质蛋白'
+    },
+    {
+      iconPath: '../../../images/purpose.png',
+      content: '应用：食材表已应用于500期减脂营，促成15000人减重100吨'
+    },
+    {
+      iconPath: '../../../images/independent.png',
+      content: '研发：由PiPi AI LAB联合中国疾控中心、北大医学部开发'
+    },
+    {
+      iconPath: '../../../images/speedy.png',
+      content: '便捷：食材表已链接供应链，点击食材即可实现购买'
+    }
+  ],
+  tip: '长按食材标注置顶或不喜欢',
+  titleName: '类别',
+  tabIconsPath: [
+    '../../../images/grains.png',
+    '../../../images/vegetables2.png',
+    '../../../images/fruits.png',
+    '../../../images/poultris.png',
+    '../../../images/soyNuts.png'
+  ],
+  prority: [{
+      id: 1,
+      name: '价格优先'
+    },
+    {
+      id: 2,
+      name: '品质优先'
+    },
+    {
+      id: 3,
+      name: '销量优先'
+    }
+  ],
+  closeIconPath: '../../../images/close.png',
+  shopIconPath: '../../../images/shoppingcart.png',
+  rmb: '¥',
+  originalPrice: '原价¥',
+  top: '置顶',
+  dislike: '不喜欢',
+}

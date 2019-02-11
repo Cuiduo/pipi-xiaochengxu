@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/login/logs",
+    "pages/index/index/index",    
+    "pages/car/index/index",
+    "pages/car/address/index",
+    "pages/car/editAddress/index",
+    "pages/car/orderConfirm/index",
+    "pages/car/paySuccess/index",
+    "pages/car/feedBack/index",
+    "pages/center/myOrder/orderDetail/index",
+    "pages/center/myOrder/orderList/index",
+    "pages/center/myCollection/index",
+    "pages/index/package/package",
+    "pages/center/index/index",
+    "pages/index/article/article",
+    "pages/optimization/goods/goods",
+    "pages/test/test",
+    "pages/optimization/index/index",
+    "pages/center/other/index",
+    "pages/center/member/index",
+    "pages/center/fans/index",
+    "pages/center/getcash/index",
+    "pages/center/getcashsuccess/index",
+    "pages/center/phone/index",
+    "pages/center/myearning/index",
+    "pages/center/getcashlist/index",
+    "pages/center/aftersaleserver/index",
+    "pages/center/applyaftersalelist/index",
+    "pages/center/applyaftersale/index",
+    "pages/center/aftersalesubmitsuc/index",
+    "pages/optimization/filter/filter"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序获取您的位置信息"
+    }
+  },
+  "tabBar": {
+    "selectedColor": "#F1531F",
+    "color": "#030303",
+    "list": [
+      {
+        "pagePath": "pages/index/index/index",
+        "iconPath": "images/firstTab.png",
+        "selectedIconPath": "images/firstTabed.png",
+        "text": "营养好货"
+      },
+      {
+        "pagePath": "pages/optimization/index/index",
+        "iconPath": "images/second.png",
+        "selectedIconPath": "images/seconded.png",
+        "text": "优选食材"
+      },
+      {
+        "pagePath": "pages/car/index/index",
+        "iconPath": "images/third.png",
+        "selectedIconPath": "images/thirded.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/center/index/index",
+        "iconPath": "images/forth.png",
+        "selectedIconPath": "images/forthed.png",
+        "text": "我"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "pipi健康",
+    "navigationBarTextStyle": "black"
+  }
+}
